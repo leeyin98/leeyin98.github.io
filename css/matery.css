@@ -252,7 +252,7 @@ mark {
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #424242 !important;
 }
 
 .white-color {
@@ -264,7 +264,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #37a8f3 0%, #0f83f0 100%);
     opacity: 0.8;
 }
 
