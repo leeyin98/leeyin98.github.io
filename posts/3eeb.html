@@ -151,15 +151,6 @@
         </a>
       </li>
       
-      <li>
-        <a href="/galleries">
-          
-          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>图库</span>
-        </a>
-      </li>
-      
     </ul>
     
   </li>
@@ -180,7 +171,7 @@
         <div class="logo-name">探赜索隐</div>
         <div class="logo-desc">
             
-            目标成为一名Java Web工程师，在此记录自我成长过程
+            Leeyin98,Java Web方面准程序猿一枚
             
         </div>
     </div>
@@ -295,16 +286,6 @@
 		          <span>书籍</span>
                   </a>
                 </li>
-              
-                <li>   
-				
-                  <a href="/galleries " style="margin-left:75px";>
-				  
-				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
-			      
-		          <span>图库</span>
-                  </a>
-                </li>
                
             </ul>
           
@@ -385,6 +366,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -548,7 +542,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    494
+                    495
                 </div>
                 
 
@@ -597,7 +591,7 @@
 <p>插入链接格式：[] (),[]内填写文本信息，()内填写链接地址<br>插入图片格式：! [] ()，[]内留空，()内填写图片地址<br>注：各个符号间不留空</p>
 </blockquote>
 </li>
-<li>例：<br>链接：<a href="https://leeyin98.com/" target="_blank" rel="noopener">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
+<li>例：<br>链接：<a href="https://leeyin98.com/posts/3eeb.html" target="_blank" rel="noopener">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
 </ul>
 <h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h3><ul>
 <li>使用符号：&gt;<blockquote>
@@ -653,6 +647,7 @@
 </tbody></table>
 </li>
 </ul>
+<p><code>Over!!!</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -931,54 +926,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/posts/3eeb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.png" class="responsive-img" alt="Markdown常用格式">
+                        <img src="/medias/featureimages/5.png" class="responsive-img" alt="个人简历">
                         
-                        <span class="card-title">Markdown常用格式</span>
+                        <span class="card-title">个人简历</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            轻量级标记语言Markdown使用指南
+                            个人简历制作中
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Leeyin98
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1180,7 +1157,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">494</span>&nbsp;字
+                class="white-color">990</span>&nbsp;字
             
             
             
@@ -1210,7 +1187,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-    <a href="mailto:1542396534@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:lixijun@leeyin98.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1319,6 +1296,25 @@ $(function () {
     
     
 
-<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        $('a').each(function() {
+          const $this = $(this);
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'your_domain' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>
