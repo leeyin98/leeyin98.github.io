@@ -588,8 +588,10 @@ p.sayHello()；</code></pre><h4 id="1-4-方法重载"><a href="#1-4-方法重载
 </ul>
 <h4 id="1-5-this的使用"><a href="#1-5-this的使用" class="headerlink" title="1.5 this的使用"></a>1.5 this的使用</h4><ul>
 <li>在方法及构造方法中，使用this来访问字段及方法</li>
-<li>解决局部变量与域同名的问题，如：<br>  ```<br>  Person(int age,String name){<pre><code>  this.age = age;    //this.age表示域变量，age表示参数变量
-  this.name = name;</code></pre>  }</li>
+<li>解决局部变量与域同名的问题，如：<pre><code>  Person(int age,String name){
+      this.age = age;    //this.age表示域变量，age表示参数变量
+      this.name = name;
+  }</code></pre></li>
 <li>构造方法中，用this调用另一个构造方法，但调用语句必须放第一句</li>
 </ul>
 <h3 id="2-类的继承"><a href="#2-类的继承" class="headerlink" title="2. 类的继承"></a>2. 类的继承</h3><h4 id="2-1-继承"><a href="#2-1-继承" class="headerlink" title="2.1 继承"></a>2.1 继承</h4><ul>
