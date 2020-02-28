@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人简历, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="个人简历制作中">
+    <meta name="keywords" content="Hexo解析出错问题, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="报错：[Line 143, Column 15] expected variable end">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>个人简历 | 探赜索隐</title>
+    <title>Hexo解析出错问题 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -369,7 +369,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '37b7b8ceefdb206b10df8c61f5e8a8e2239a5d6a16c54a2c06a303037799a34d';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -387,7 +387,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人简历</h1>
+                    <h1 class="description center-align post-title">Hexo解析出错问题</h1>
                 </div>
             </div>
         </div>
@@ -502,12 +502,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+                                <span class="chip bg-color">问题记录及解决</span>
+                            </a>
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/" class="post-category">
+                                问题记录及解决
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -516,7 +533,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-27
+                    2020-02-28
                 </div>
                 
 
@@ -525,7 +542,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    236
                 </div>
                 
 
@@ -548,90 +565,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次接触Markdown标记语言，于是找了些Markdown常用格式，在此留档。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>以下为Markdown常用格式</p>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
-<li>使用符号：#<blockquote>
-<p>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题<br>######六级标题<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：我楼下的列表俩字就是栗子</li>
-</ul>
-<h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h3><ul>
-<li>使用符号：-<blockquote>
-<p>-文本1<br>-文本2<br>-文本3<br>有序列表可用1.,2.,3.等代替符号-来表示(???为什么我下面用了没实现)<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<ol>
-<li>我现在就是</li>
-<li>是个栗</li>
-<li>子</li>
-</ol>
-</li>
-</ul>
-<h3 id="3-链接和图片"><a href="#3-链接和图片" class="headerlink" title="3.链接和图片"></a>3.链接和图片</h3><ul>
-<li>使用符号：!,[]和() <blockquote>
-<p>插入链接格式：[] (),[]内填写文本信息，()内填写链接地址<br>插入图片格式：! [] ()，[]内留空，()内填写图片地址<br>注：各个符号间不留空</p>
-</blockquote>
-</li>
-<li>例：<br>链接：<a href="https://leeyin98.com/posts/3eeb.html" target="_blank" rel="noopener">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
-</ul>
-<h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h3><ul>
-<li>使用符号：&gt;<blockquote>
-<p>模板：&gt; 文本信息，&gt;&gt; 文本信息<br>需要引用时，文字前添加符号&gt;即可，&gt;&gt;表示引用内再次引用<br>注：符号&gt;和文本要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<blockquote>
-<p>我是一<br>个栗<br>子</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="5-字体"><a href="#5-字体" class="headerlink" title="5.字体"></a>5.字体</h3><ul>
-<li>使用符号： *<blockquote>
-<p>粗体：用两个符号<em>包含一段文字<br>斜体：用一个符号</em>包含一段文字</p>
-</blockquote>
-</li>
-<li>例：举个栗子，<em>我是斜体</em>，<strong>我是粗体</strong>。</li>
-</ul>
-<h3 id="6-代码应用"><a href="#6-代码应用" class="headerlink" title="6.代码应用"></a>6.代码应用</h3><ul>
-<li>使用符号：`<blockquote>
-<p>引用一行：用符号`包含语句<br>引用多行：将符号```置于代码的首行与末行</p>
-</blockquote>
-</li>
-<li>例：<br>  单行：<code>This is a chestnut</code><br>  多行：<pre><code>  This
-     is
-       a
-        chestnut</code></pre></li>
-</ul>
-<h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7.表格"></a>7.表格</h3><ul>
-<li>使用符号：|，-和:</li>
-<li>例：<table>
-<thead>
-<tr>
-<th>栗子No.x</th>
-<th align="center">优点</th>
-<th align="right">价格</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>栗子No.0</td>
-<td align="center">又长又宽</td>
-<td align="right">$1024</td>
-</tr>
-<tr>
-<td>栗子No.1</td>
-<td align="center">又大又圆</td>
-<td align="right">$512</td>
-</tr>
-<tr>
-<td>栗子No.2</td>
-<td align="center">好吃</td>
-<td align="right">$256</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p><code>Over!!!</code></p>
+                <h3 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h3><p>在写Java基础知识笔记，使用<code>hexo g</code>生成文章是，出现如下报错：</p>
+<pre><code>FATAL Something's wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
+Nunjucks Error:  [Line 143, Column 15] expected variable end</code></pre><h3 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h3><p>在Hexo故障排除文档<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">文档链接</a>中发现问题原因：<br>当文章中同时才出现两个花括号<code>}}</code>时，且两个花括号未被代码块包含时，解析会出现问题(使用单`包含无作用)</p>
+<h3 id="3-解决方法"><a href="#3-解决方法" class="headerlink" title="3. 解决方法"></a>3. 解决方法</h3><p>使用特定代码将含有两个花括号的内容包含，如：</p>
+<pre><code>{% raw %}
+Hello {{ sensitive }}       //同时出现两个花括号的内容
+{% endraw %}</code></pre><h5 id="问题解决参考来源"><a href="#问题解决参考来源" class="headerlink" title="问题解决参考来源"></a>问题解决参考来源</h5><p><a href="https://hexo.io/docs/troubleshooting" target="_blank" rel="noopener">Hexo官方故障排除文档</a><br><a href="https://www.jianshu.com/p/738ebe02029b" target="_blank" rel="noopener">Hexo的一个小BUG</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -675,7 +615,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://leeyin98.github.io/posts/cf60.html">http://leeyin98.github.io/posts/cf60.html</a>
+                    <a href="http://leeyin98.github.io/posts/c6bf.html">http://leeyin98.github.io/posts/c6bf.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,7 +652,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+                                    <span class="chip bg-color">问题记录及解决</span>
+                                </a>
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -881,7 +829,7 @@
         repo: 'gittalk',
         owner: 'leeyin98',
         admin: "leeyin98",
-        id: '2020-02-27T19-33-00',
+        id: '2020-02-28T16-26-10',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -906,19 +854,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/7a13.html">
+                <a href="/posts/34c1.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png" class="responsive-img" alt="Java基础.1 Java语言与面向对象的程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228203828.png" class="responsive-img" alt="package小错误">
                         
-                        <span class="card-title">Java基础.1 Java语言与面向对象的程序设计</span>
+                        <span class="card-title">package小错误</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语言的历史和发展；Java程序的编译及运行
+                            异常处理；自定义异常；断言及程序的测试；程序的调试
                         
                     </div>
                     <div class="publish-info">
@@ -959,48 +907,35 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3eeb.html">
+                <a href="/posts/19f.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201144.png" class="responsive-img" alt="Markdown常用格式">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201738.png" class="responsive-img" alt="Java知识笔记10">
                         
-                        <span class="card-title">Markdown常用格式</span>
+                        <span class="card-title">Java知识笔记10</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            轻量级标记语言Markdown使用指南
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Leeyin98
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
-                    </a>
-                    
                 </div>
                 
             </div>

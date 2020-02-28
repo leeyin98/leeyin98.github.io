@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人简历, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="个人简历制作中">
+    <meta name="keywords" content="Java基础6. 异常处理与程序调试, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="异常处理；自定义异常；断言及程序的测试；程序的调试">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>个人简历 | 探赜索隐</title>
+    <title>Java基础6. 异常处理与程序调试 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -369,7 +369,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '37b7b8ceefdb206b10df8c61f5e8a8e2239a5d6a16c54a2c06a303037799a34d';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -382,12 +382,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228200601.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人简历</h1>
+                    <h1 class="description center-align post-title">Java基础6. 异常处理与程序调试</h1>
                 </div>
             </div>
         </div>
@@ -502,12 +502,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -516,7 +533,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-27
+                    2020-02-28
                 </div>
                 
 
@@ -525,14 +542,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    974
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 				
@@ -548,90 +565,113 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次接触Markdown标记语言，于是找了些Markdown常用格式，在此留档。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>以下为Markdown常用格式</p>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
-<li>使用符号：#<blockquote>
-<p>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题<br>######六级标题<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：我楼下的列表俩字就是栗子</li>
+                <h1 id="第5讲-异常处理与程序调试"><a href="#第5讲-异常处理与程序调试" class="headerlink" title="第5讲 异常处理与程序调试"></a>第5讲 异常处理与程序调试</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第6讲主要讲述：异常处理；自定义异常；断言及程序的测试；程序的调试</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-异常处理"><a href="#1-异常处理" class="headerlink" title="1. 异常处理"></a>1. 异常处理</h3><h4 id="1-1-异常定义"><a href="#1-1-异常定义" class="headerlink" title="1.1 异常定义"></a>1.1 异常定义</h4><p>异常，对应着Java运行错误的处理机制</p>
+<h5 id="基本写法"><a href="#基本写法" class="headerlink" title="基本写法"></a>基本写法</h5><pre><code>try{
+    语句组;
+}catch(Exception ex){
+    异常处理语句组;
+}</code></pre><h5 id="异常处理流程"><a href="#异常处理流程" class="headerlink" title="异常处理流程"></a>异常处理流程</h5><p>1.抛出(throw)异常<br>2.运行时系统在调用栈中查找<br>3.捕获(catch)异常的代码<br>相关语句：</p>
+<pre><code>抛出异常：`throw 异常对象;`
+捕获异常：
+try{
+    语句组
+}catch(异常类名 异常形式参数名){
+    异常处理语句组;
+}catch(异常类名 异常形式参数名){
+    异常处理语句组;
+}finally{
+    异常处理语句组;
+}
+其中，catch语句可以是0或多个，可以没有fanally语句</code></pre><h4 id="1-2-异常分类"><a href="#1-2-异常分类" class="headerlink" title="1.2 异常分类"></a>1.2 异常分类</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228194514.png" alt=""><br>Error：JVM的错误<br>Exception：异常，其构造方法为：</p>
+<ul>
+<li><code>public Exception();</code></li>
+<li><code>public Exception(String message);</code></li>
+<li><code>Exception(String message,Throwable cause);</code></li>
 </ul>
-<h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h3><ul>
-<li>使用符号：-<blockquote>
-<p>-文本1<br>-文本2<br>-文本3<br>有序列表可用1.,2.,3.等代替符号-来表示(???为什么我下面用了没实现)<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<ol>
-<li>我现在就是</li>
-<li>是个栗</li>
-<li>子</li>
-</ol>
-</li>
+<h4 id="1-3-多异常处理"><a href="#1-3-多异常处理" class="headerlink" title="1.3 多异常处理"></a>1.3 多异常处理</h4><p>子类异常要写在父类异常前面<br>finally语句：无论是否有异常都要执行，即使其中有break,return等语句</p>
+<h4 id="1-4-受检的异常"><a href="#1-4-受检的异常" class="headerlink" title="1.4 受检的异常"></a>1.4 受检的异常</h4><p>Exception分为两种：</p>
+<ul>
+<li>RuntimeException及其子类，可以不明确处理</li>
+<li>否则，称为受检的异常(checked Exception)<br>受检的异常，要求明确进行语法处理：</li>
+<li>要么捕获(catch)</li>
+<li>要么抛出(throws)：在方法的签名后面用throws xxxx来声明</li>
 </ul>
-<h3 id="3-链接和图片"><a href="#3-链接和图片" class="headerlink" title="3.链接和图片"></a>3.链接和图片</h3><ul>
-<li>使用符号：!,[]和() <blockquote>
-<p>插入链接格式：[] (),[]内填写文本信息，()内填写链接地址<br>插入图片格式：! [] ()，[]内留空，()内填写图片地址<br>注：各个符号间不留空</p>
-</blockquote>
-</li>
-<li>例：<br>链接：<a href="https://leeyin98.com/posts/3eeb.html" target="_blank" rel="noopener">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
+<h3 id="2-自定义异常"><a href="#2-自定义异常" class="headerlink" title="2. 自定义异常"></a>2. 自定义异常</h3><h4 id="2-1-创建用户自定义异常"><a href="#2-1-创建用户自定义异常" class="headerlink" title="2.1 创建用户自定义异常"></a>2.1 创建用户自定义异常</h4><p>继承自Exception类或某个子Exception类<br>定义属性和方法，或重载父类的方法</p>
+<h4 id="2-2-重抛异常及异常链接"><a href="#2-2-重抛异常及异常链接" class="headerlink" title="2.2 重抛异常及异常链接"></a>2.2 重抛异常及异常链接</h4><p>对于异常，不仅要进行捕获处理，优势也要将此异常进一步传递给调用者，以便让调用者也能感受到这种异常，这时可以在catch语句块或finally语句块中采取以下三种方式：</p>
+<ul>
+<li>将当前捕获的异常再次抛出<ul>
+<li><code>throw e;</code></li>
 </ul>
-<h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h3><ul>
-<li>使用符号：&gt;<blockquote>
-<p>模板：&gt; 文本信息，&gt;&gt; 文本信息<br>需要引用时，文字前添加符号&gt;即可，&gt;&gt;表示引用内再次引用<br>注：符号&gt;和文本要保留一个字符的空格</p>
-</blockquote>
 </li>
-<li>例：<blockquote>
-<p>我是一<br>个栗<br>子</p>
-</blockquote>
-</li>
+<li>重新生成一个异常并抛出，如<ul>
+<li><code>throw new Exception("some message");</code></li>
 </ul>
-<h3 id="5-字体"><a href="#5-字体" class="headerlink" title="5.字体"></a>5.字体</h3><ul>
-<li>使用符号： *<blockquote>
-<p>粗体：用两个符号<em>包含一段文字<br>斜体：用一个符号</em>包含一段文字</p>
-</blockquote>
 </li>
-<li>例：举个栗子，<em>我是斜体</em>，<strong>我是粗体</strong>。</li>
+<li>重新生成并抛出一个新异常，该异常中包含了当前异常的信息，如<ul>
+<li><code>throw new Exception("some message",e);</code>可用<code>e.getCause()</code>得到内部异常</li>
 </ul>
-<h3 id="6-代码应用"><a href="#6-代码应用" class="headerlink" title="6.代码应用"></a>6.代码应用</h3><ul>
-<li>使用符号：`<blockquote>
-<p>引用一行：用符号`包含语句<br>引用多行：将符号```置于代码的首行与末行</p>
-</blockquote>
-</li>
-<li>例：<br>  单行：<code>This is a chestnut</code><br>  多行：<pre><code>  This
-     is
-       a
-        chestnut</code></pre></li>
-</ul>
-<h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7.表格"></a>7.表格</h3><ul>
-<li>使用符号：|，-和:</li>
-<li>例：<table>
-<thead>
-<tr>
-<th>栗子No.x</th>
-<th align="center">优点</th>
-<th align="right">价格</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>栗子No.0</td>
-<td align="center">又长又宽</td>
-<td align="right">$1024</td>
-</tr>
-<tr>
-<td>栗子No.1</td>
-<td align="center">又大又圆</td>
-<td align="right">$512</td>
-</tr>
-<tr>
-<td>栗子No.2</td>
-<td align="center">好吃</td>
-<td align="right">$256</td>
-</tr>
-</tbody></table>
 </li>
 </ul>
-<p><code>Over!!!</code></p>
+<h3 id="3-断言及程序的测试"><a href="#3-断言及程序的测试" class="headerlink" title="3. 断言及程序的测试"></a>3. 断言及程序的测试</h3><h4 id="3-1-断言-assertion"><a href="#3-1-断言-assertion" class="headerlink" title="3.1 断言(assertion)"></a>3.1 断言(assertion)</h4><p>assert的写法：</p>
+<ul>
+<li><code>assert 表达式;</code></li>
+<li><code>assert 表达式：信息;</code><br>例：<pre><code>class Assertion{
+  public static void main(String[] args){
+      assert hypotenuse(3,4)==5 : "算法不正确";   //assert写法
+  }
+  static double hypotenuse(double x,double y){
+      return Math.sqrt(x*x+y*y+1);
+  }
+}</code></pre><code>调试程序时，若表达式部位true，则程序会产生异常并输出相关的错误信息</code></li>
+</ul>
+<h4 id="3-2-程序的测试及Junit"><a href="#3-2-程序的测试及Junit" class="headerlink" title="3.2 程序的测试及Junit"></a>3.2 程序的测试及Junit</h4><p>Eclipse中</p>
+<ul>
+<li>项目上右键-New-Junit Test Case</li>
+<li>项目上右键-Run as-Junit Test</li>
+</ul>
+<h4 id="3-3-测试函数"><a href="#3-3-测试函数" class="headerlink" title="3.3 测试函数"></a>3.3 测试函数</h4><p><code>@Test</code>用来标注测试函数<br>测试中常用的语句：</p>
+<ul>
+<li><code>fail(信息);</code>             //表示程序出错</li>
+<li><code>assertEquals(参数1,参数2);</code>      //表示程序要保证两个参数相等</li>
+<li><code>assertNull(参数);</code>     //表示参数要为null</li>
+</ul>
+<h3 id="4-程序的调试"><a href="#4-程序的调试" class="headerlink" title="4. 程序的调试"></a>4. 程序的调试</h3><h4 id="4-1-程序中的错误"><a href="#4-1-程序中的错误" class="headerlink" title="4.1 程序中的错误"></a>4.1 程序中的错误</h4><p>程序中的错误，通常分为三大类：</p>
+<ul>
+<li>语法错误(Syntax error)<ul>
+<li>编辑、编译器发现</li>
+</ul>
+</li>
+<li>运行错误(Runtime error)<ul>
+<li>异常处理机制</li>
+</ul>
+</li>
+<li>逻辑错误(Logic error)<ul>
+<li>调试(debug)、单元测试(unit test)</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-2-程序的调试-debug"><a href="#4-2-程序的调试-debug" class="headerlink" title="4.2 程序的调试(debug)"></a>4.2 程序的调试(debug)</h4><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><p>1.在IDE中，项目上右键，debug as…<br>2.进入到调试试图(debug perspective)</p>
+<h5 id="调试的手段"><a href="#调试的手段" class="headerlink" title="调试的手段"></a>调试的手段</h5><ul>
+<li>断点(breakpoint)：<ul>
+<li>切换断点：鼠标右击编译器左边条；Eclipse快捷键：Ctrl+Shift+B</li>
+</ul>
+</li>
+<li>跟踪(trace)：<ul>
+<li>Eclipse快捷键</li>
+<li>逐语句执行：F5</li>
+<li>逐过程执行：F6</li>
+<li>跳出函数：F7</li>
+<li>运行到光标处：Ctrl+R</li>
+</ul>
+</li>
+<li>监视(watch)<ul>
+<li>即时监视：鼠标指向变量</li>
+<li>快速监视：点右键，Inspector</li>
+<li>添加监视：点右键，Watch</li>
+</ul>
+</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -675,7 +715,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://leeyin98.github.io/posts/cf60.html">http://leeyin98.github.io/posts/cf60.html</a>
+                    <a href="http://leeyin98.github.io/posts/1d72.html">http://leeyin98.github.io/posts/1d72.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,7 +752,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -881,7 +929,7 @@
         repo: 'gittalk',
         owner: 'leeyin98',
         admin: "leeyin98",
-        id: '2020-02-27T19-33-00',
+        id: '2020-02-28T13-16-39',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -906,25 +954,65 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/7a13.html">
+                <a href="/posts/undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png" class="responsive-img" alt="Java基础.1 Java语言与面向对象的程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png" class="responsive-img" alt="Java知识笔记7">
                         
-                        <span class="card-title">Java基础.1 Java语言与面向对象的程序设计</span>
+                        <span class="card-title">Java知识笔记7</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语言的历史和发展；Java程序的编译及运行
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Leeyin98
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/1c32.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202008.png" class="responsive-img" alt="Java基础5. 深入理解Java语言">
+                        
+                        <span class="card-title">Java基础5. 深入理解Java语言</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            变量及其传递；多态及虚方法调用；对象的构造与初始化；对象清除与垃圾回收；内部类与匿名类；其他几个高级语法；没有指针的Java语言
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -946,59 +1034,6 @@
                     
                     <a href="/tags/%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/3eeb.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201144.png" class="responsive-img" alt="Markdown常用格式">
-                        
-                        <span class="card-title">Markdown常用格式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            轻量级标记语言Markdown使用指南
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>

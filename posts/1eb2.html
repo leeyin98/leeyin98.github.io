@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人简历, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="个人简历制作中">
+    <meta name="keywords" content="Java基础.3 数据运算、流控制和数组, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="数据类型、变量与常量；运算符与表达式；流程控制语句；数组">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>个人简历 | 探赜索隐</title>
+    <title>Java基础.3 数据运算、流控制和数组 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -369,7 +369,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '37b7b8ceefdb206b10df8c61f5e8a8e2239a5d6a16c54a2c06a303037799a34d';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -382,12 +382,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228200601.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202249.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人简历</h1>
+                    <h1 class="description center-align post-title">Java基础.3 数据运算、流控制和数组</h1>
                 </div>
             </div>
         </div>
@@ -502,12 +502,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -516,7 +533,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-27
+                    2020-02-28
                 </div>
                 
 
@@ -525,14 +542,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 				
@@ -548,90 +565,225 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次接触Markdown标记语言，于是找了些Markdown常用格式，在此留档。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>以下为Markdown常用格式</p>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
-<li>使用符号：#<blockquote>
-<p>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题<br>######六级标题<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：我楼下的列表俩字就是栗子</li>
+                <h1 id="第3讲-数据运算、流程控制和数组"><a href="#第3讲-数据运算、流程控制和数组" class="headerlink" title="第3讲 数据运算、流程控制和数组"></a>第3讲 数据运算、流程控制和数组</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第3讲主要讲述：数据类型、变量与常量；运算符与表达式；流程控制语句；数组</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-数据类型、变量与常量"><a href="#1-数据类型、变量与常量" class="headerlink" title="1. 数据类型、变量与常量"></a>1. 数据类型、变量与常量</h3><h4 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1 数据类型"></a>1.1 数据类型</h4><ul>
+<li>基本类型：变量在栈</li>
+<li>引用类型：变量引用到堆<ul>
+<li>double d = 3;</li>
+<li>Person p = new Preson();<br>赋值时：</li>
+<li>double d2=d;     复制的是值</li>
+<li>Person p2=p;     复制的是引用<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228143215.png" alt=""></li>
 </ul>
-<h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h3><ul>
-<li>使用符号：-<blockquote>
-<p>-文本1<br>-文本2<br>-文本3<br>有序列表可用1.,2.,3.等代替符号-来表示(???为什么我下面用了没实现)<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<ol>
-<li>我现在就是</li>
-<li>是个栗</li>
-<li>子</li>
-</ol>
 </li>
 </ul>
-<h3 id="3-链接和图片"><a href="#3-链接和图片" class="headerlink" title="3.链接和图片"></a>3.链接和图片</h3><ul>
-<li>使用符号：!,[]和() <blockquote>
-<p>插入链接格式：[] (),[]内填写文本信息，()内填写链接地址<br>插入图片格式：! [] ()，[]内留空，()内填写图片地址<br>注：各个符号间不留空</p>
-</blockquote>
-</li>
-<li>例：<br>链接：<a href="https://leeyin98.com/posts/3eeb.html" target="_blank" rel="noopener">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
-</ul>
-<h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h3><ul>
-<li>使用符号：&gt;<blockquote>
-<p>模板：&gt; 文本信息，&gt;&gt; 文本信息<br>需要引用时，文字前添加符号&gt;即可，&gt;&gt;表示引用内再次引用<br>注：符号&gt;和文本要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<blockquote>
-<p>我是一<br>个栗<br>子</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="5-字体"><a href="#5-字体" class="headerlink" title="5.字体"></a>5.字体</h3><ul>
-<li>使用符号： *<blockquote>
-<p>粗体：用两个符号<em>包含一段文字<br>斜体：用一个符号</em>包含一段文字</p>
-</blockquote>
-</li>
-<li>例：举个栗子，<em>我是斜体</em>，<strong>我是粗体</strong>。</li>
-</ul>
-<h3 id="6-代码应用"><a href="#6-代码应用" class="headerlink" title="6.代码应用"></a>6.代码应用</h3><ul>
-<li>使用符号：`<blockquote>
-<p>引用一行：用符号`包含语句<br>引用多行：将符号```置于代码的首行与末行</p>
-</blockquote>
-</li>
-<li>例：<br>  单行：<code>This is a chestnut</code><br>  多行：<pre><code>  This
-     is
-       a
-        chestnut</code></pre></li>
-</ul>
-<h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7.表格"></a>7.表格</h3><ul>
-<li>使用符号：|，-和:</li>
-<li>例：<table>
+<h4 id="1-2-数据类型"><a href="#1-2-数据类型" class="headerlink" title="1.2 数据类型"></a>1.2 数据类型</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228143338.png" alt=""></p>
+<ul>
+<li>常用的基本数据类型<table>
 <thead>
 <tr>
-<th>栗子No.x</th>
-<th align="center">优点</th>
-<th align="right">价格</th>
+<th>数据类型</th>
+<th align="center">说明</th>
+<th align="center">字节</th>
+<th align="center">应用</th>
+<th align="center">示例</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>栗子No.0</td>
-<td align="center">又长又宽</td>
-<td align="right">$1024</td>
+<td>int</td>
+<td align="center">整型</td>
+<td align="center">4</td>
+<td align="center">用于存储整数，如年龄、个数</td>
+<td align="center">int age=21;</td>
 </tr>
 <tr>
-<td>栗子No.1</td>
-<td align="center">又大又圆</td>
-<td align="right">$512</td>
+<td>double</td>
+<td align="center">双精度浮点型</td>
+<td align="center">8</td>
+<td align="center">用于存储小数，如商品价格</td>
+<td align="center">double price=15.5;</td>
 </tr>
 <tr>
-<td>栗子No.2</td>
-<td align="center">好吃</td>
-<td align="right">$256</td>
+<td>float</td>
+<td align="center">单精度浮点型</td>
+<td align="center">4</td>
+<td align="center">用于存储小数，如身高</td>
+<td align="center">float height=175.2f;</td>
+</tr>
+<tr>
+<td>char</td>
+<td align="center">字符型</td>
+<td align="center">2</td>
+<td align="center">用于存储单个字符，如性格’男’</td>
+<td align="center">char sex=’男’;</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td align="center">布尔型</td>
+<td align="center">1</td>
+<td align="center">表示真或假，取值只能为true或false</td>
+<td align="center">boolean flag=true;</td>
 </tr>
 </tbody></table>
 </li>
 </ul>
-<p><code>Over!!!</code></p>
+<p>注：</p>
+<ul>
+<li>为float变量赋值时在数值后添加字母f</li>
+<li>为char变量赋值时使用单引号引起来</li>
+<li>String是一种常见的引用数据类型，用来表示字符串，赋值时用双引号引起来</li>
+<li>Java中没有“无符号数”</li>
+</ul>
+<h3 id="2-运算符表达式"><a href="#2-运算符表达式" class="headerlink" title="2. 运算符表达式"></a>2. 运算符表达式</h3><h4 id="2-1-算术运算符"><a href="#2-1-算术运算符" class="headerlink" title="2.1 算术运算符"></a>2.1 算术运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145919.png" alt=""></p>
+<h4 id="2-2-赋值运算符"><a href="#2-2-赋值运算符" class="headerlink" title="2.2 赋值运算符"></a>2.2 赋值运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145929.png" alt=""></p>
+<h4 id="2-3-比较运算符"><a href="#2-3-比较运算符" class="headerlink" title="2.3 比较运算符"></a>2.3 比较运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145941.png" alt=""></p>
+<h4 id="2-4-逻辑运算符"><a href="#2-4-逻辑运算符" class="headerlink" title="2.4 逻辑运算符"></a>2.4 逻辑运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145949.png" alt=""></p>
+<h4 id="2-5-位运算符"><a href="#2-5-位运算符" class="headerlink" title="2.5 位运算符"></a>2.5 位运算符</h4><ol>
+<li>~：取反</li>
+<li>&amp;：按位与</li>
+<li>|：按位或</li>
+<li>^：按位异或</li>
+</ol>
+<h4 id="2-6-移位运算符"><a href="#2-6-移位运算符" class="headerlink" title="2.6 移位运算符"></a>2.6 移位运算符</h4><ul>
+<li>左移：”a&lt;&lt;b;”  将二进制形式的a逐位左移b位，最低位空出的b位补0</li>
+<li>无符号右移：”a&gt;&gt;&gt;b;”  将二进制形式的a逐位右移b位，最低位空出的b位补0</li>
+<li>带符号右移：”a&gt;&gt;b;”  将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位</li>
+</ul>
+<h4 id="2-7-条件运算符"><a href="#2-7-条件运算符" class="headerlink" title="2.7 条件运算符"></a>2.7 条件运算符</h4><p>语法形式：布尔表达式 ？ 表达式1 ：表达式2<br>运算过程：如果布尔表达式的值为true，则返回表达式1的值，否则返回表达式2的值。<br>例如：</p>
+<pre><code>String str = (8&gt;5) ? "8大于5" : "8不大于5" ;
+System.out.println(str);</code></pre><p>因为表达式8&gt;5为true，所以返回“8大于5”</p>
+<h4 id="2-8-Java中运算符的优先级（从上到下，由高到低）"><a href="#2-8-Java中运算符的优先级（从上到下，由高到低）" class="headerlink" title="2.8 Java中运算符的优先级（从上到下，由高到低）"></a>2.8 Java中运算符的优先级（从上到下，由高到低）</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228150822.png" alt=""></p>
+<h4 id="2-9-表达式中的类型转换"><a href="#2-9-表达式中的类型转换" class="headerlink" title="2.9 表达式中的类型转换"></a>2.9 表达式中的类型转换</h4><p>int→long→float→double<br>所有的byte、short、char参与算术运算都转为int</p>
+<h3 id="3-流程控制语句"><a href="#3-流程控制语句" class="headerlink" title="3. 流程控制语句"></a>3. 流程控制语句</h3><h4 id="3-1-if语句"><a href="#3-1-if语句" class="headerlink" title="3.1 if语句"></a>3.1 if语句</h4><p>语法：</p>
+<pre><code>if(条件){
+    条件成立时执行的代码
+}</code></pre><h4 id="3-2-if…else语句"><a href="#3-2-if…else语句" class="headerlink" title="3.2 if…else语句"></a>3.2 if…else语句</h4><p>语法：</p>
+<pre><code>
+if(条件的布尔表达式){
+    代码块1
+}else{
+    代码块2
+}
+</code></pre><h4 id="3-3-多重if语句"><a href="#3-3-多重if语句" class="headerlink" title="3.3 多重if语句"></a>3.3 多重if语句</h4><p>语法：</p>
+<pre><code>
+if(条件1){
+    代码块1
+}else if(条件2){
+    代码块2
+}else{
+    代码块3
+}
+</code></pre><h4 id="3-4-if嵌套语句"><a href="#3-4-if嵌套语句" class="headerlink" title="3.4 if嵌套语句"></a>3.4 if嵌套语句</h4><p>语法：</p>
+<pre><code>
+if(条件1){
+    if(条件2){
+        代码块1
+    }else{
+        代码块2
+    }
+}else{
+    代码块3
+}
+</code></pre><h4 id="3-5-switch语句"><a href="#3-5-switch语句" class="headerlink" title="3.5 switch语句"></a>3.5 switch语句</h4><p>语法：</p>
+<pre><code>
+switch(表达式){
+    case 值1:
+        执行代码块1  break;
+    case 值2:
+        执行代码块2  break;
+    case 值n:
+        执行代码块n  break;
+    default :
+        默认执行的代码
+}
+</code></pre><p><code>注意事项：</code></p>
+<blockquote>
+<ol>
+<li>switch 后面小括号中表达式的值必须是整型或字符型</li>
+<li>case 后面的值可以是常量数值，如 1、2；也可以是一个常量表达式，如 2+2 ；但不能是变量或带有变量的表达式，如 a * 2</li>
+<li>case 匹配后，执行匹配块里的程序代码，如果没有遇见 break 会继续执行下一个的 case 块的内容，直到遇到 break 语句或者 switch 语句块结束</li>
+<li>把功能相同的case语句合并起来，如:<pre><code> case 1:
+ case 2:
+     system.out.println("1024")</code></pre></li>
+<li>default块可以出现在任意位置，也可以省略</li>
+</ol>
+</blockquote>
+<h4 id="3-6-循环语句"><a href="#3-6-循环语句" class="headerlink" title="3.6 循环语句"></a>3.6 循环语句</h4><h5 id="3-6-1-循环语句之while"><a href="#3-6-1-循环语句之while" class="headerlink" title="3.6.1 循环语句之while"></a>3.6.1 循环语句之while</h5><p>语法：</p>
+<pre><code>while(判断条件){
+    操作代码块
+}</code></pre><p>执行过程：<br>1.判断while后面的条件是否成立<br>2.当条件成立时，执行循环内的操作代码，然后重复执行1和2，直到循环条件不成立为止<br>特点：<code>先判断，后执行</code></p>
+<h5 id="3-6-2-循环语句之do…while"><a href="#3-6-2-循环语句之do…while" class="headerlink" title="3.6.2 循环语句之do…while"></a>3.6.2 循环语句之do…while</h5><p>语法：</p>
+<pre><code>do{
+    操作代码块
+}while(判断条件);</code></pre><p>执行过程：<br>1.先执行一遍操作代码，然后帕帕尼段循环条件是否成立<br>2.若条件成立，继续执行1和2，直到条件不成立为止<br>特点：<code>先执行，后判断</code></p>
+<ul>
+<li>do…while语句保证循环至少被执行一次！</li>
+</ul>
+<h5 id="3-6-3-循环语句之for"><a href="#3-6-3-循环语句之for" class="headerlink" title="3.6.3 循环语句之for"></a>3.6.3 循环语句之for</h5><p>语法：</p>
+<pre><code>for (循环变量初始化;循环条件;循环变量变化){
+    操作代码块
+}</code></pre><p>执行过程：<br>1.执行循环变量初始化部分，设置循环的初始状态，此<br>部分在整个循环中只执行一次<br>2.进行循环条件的判断，如果条件为 true ，则执行循环<br>体内代码；如果为 false ，则直接退出循环<br>2.执行循环变量变化部分，改变循环变量的值，以便进<br>行下一次条件判断<br>4.依次重新执行2.3.4，直到退出循环<br>特点：<code>相比 while 和 do...while 语句结构更加简洁易读</code></p>
+<p>for循环小细节：</p>
+<blockquote>
+<ol>
+<li>for 关键字后面括号中的三个表达式必须用 “;” 隔开，三个表达式都可以省略，但 “;” 不能省略<br> a.省略“循环变量初始化”，可以在 for 语句之前由赋值语句进行变量初始化操作<br> b.省略“循环条件”，可能会造成循环将一直执行下去，也就是我们常说的“死循环”现象<br> c.省略“循环变量变化”，可以在循环体中进行循环变量的变化</li>
+<li>for 循环变量初始化和循环变量变化部分，可以是使用 “,” 同时初始化或改变多个循环变量的值</li>
+<li>循环条件部分可以使用逻辑运算符组合的表达式，表示复杂判断条件，但一定注意运算的优先级</li>
+</ol>
+</blockquote>
+<h5 id="3-6-4-循环跳转语句之break"><a href="#3-6-4-循环跳转语句之break" class="headerlink" title="3.6.4 循环跳转语句之break"></a>3.6.4 循环跳转语句之break</h5><p>用法示例：</p>
+<pre><code>
+public static void main(String[] args){
+    for(int i=1;i&lt;=10;i++&gt;){
+        if((i&gt;2) &amp;&amp; (i%3==0)){
+            //通过break结束循环，执行循环后的语句
+            break;
+        }
+        System.out.println(i);
+    }
+    System.out.println("结束")
+}
+</code></pre><h5 id="3-6-5-循环跳转语句之continue"><a href="#3-6-5-循环跳转语句之continue" class="headerlink" title="3.6.5 循环跳转语句之continue"></a>3.6.5 循环跳转语句之continue</h5><p>用法示例：</p>
+<pre><code>
+public static void main(String[] args){
+    for(int i=1;i&lt;=10;i++&gt;){
+        if(i % 2 != 0){
+            //通过continue结束本次循环，直接进行下一次循环
+            continue;
+        }
+        System.out.println(i);
+    }
+    System.out.println("结束")
+}
+</code></pre><h3 id="4-数组"><a href="#4-数组" class="headerlink" title="4. 数组"></a>4. 数组</h3><h4 id="4-1-一维数组"><a href="#4-1-一维数组" class="headerlink" title="4.1 一维数组"></a>4.1 一维数组</h4><ul>
+<li>声明方式：<ul>
+<li>int[] a;</li>
+<li>double []b;</li>
+<li>Mydate c[];<br>注：方括号可写到变量名前，也可写到变量名后</li>
+</ul>
+</li>
+<li>数组初始化：<ul>
+<li><code>int[] a = new int[3]</code>      分配3个空间</li>
+<li><code>a[0]=1;  a[1]=2;   a[2]=3;</code><br>注：<code>数组定义与为数组分配空间分开进行</code></li>
+</ul>
+</li>
+<li>数组静态初始化：<ul>
+<li><code>int[] a={1,2,3};</code>   或</li>
+<li><code>int[] a=new int[]{1,2,3};</code></li>
+</ul>
+</li>
+<li>数组元素的引用：<br>每个数组都有个属性length指明其长度<br>例：ages.length指明数组a的长度, <code>for(int i=0;i&lt;ages.length;i++)</code></li>
+</ul>
+<h4 id="4-2-二维数组"><a href="#4-2-二维数组" class="headerlink" title="4.2 二维数组"></a>4.2 二维数组</h4><p>声明方式：</p>
+
+int [][] t={{1,2},{3,4,5},{6,7,8}};
+
+<p>数组可写为<code>int [][] t=new int [3][];</code><br>不可写为<code>int [][] t=new int [][4];</code></p>
+<h4 id="4-3-数组赋值的常用方法"><a href="#4-3-数组赋值的常用方法" class="headerlink" title="4.3 数组赋值的常用方法"></a>4.3 数组赋值的常用方法</h4><ol>
+<li>for循环，效率最低</li>
+<li>System.arraycopy() 效率最高</li>
+<li>Arrays.copyOf() 效率次于第二种方法</li>
+<li>Object.clone() 效率次于第二种和第三种</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -675,7 +827,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://leeyin98.github.io/posts/cf60.html">http://leeyin98.github.io/posts/cf60.html</a>
+                    <a href="http://leeyin98.github.io/posts/1eb2.html">http://leeyin98.github.io/posts/1eb2.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,7 +864,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -881,7 +1041,7 @@
         repo: 'gittalk',
         owner: 'leeyin98',
         admin: "leeyin98",
-        id: '2020-02-27T19-33-00',
+        id: '2020-02-28T13-15-35',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -906,19 +1066,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/7a13.html">
+                <a href="/posts/dcf3.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png" class="responsive-img" alt="Java基础.1 Java语言与面向对象的程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201613.png" class="responsive-img" alt="Java基础.4  类、包和接口">
                         
-                        <span class="card-title">Java基础.1 Java语言与面向对象的程序设计</span>
+                        <span class="card-title">Java基础.4  类、包和接口</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语言的历史和发展；Java程序的编译及运行
+                            类、字段、方法；类的继承；访问控制修饰符；
                         
                     </div>
                     <div class="publish-info">
@@ -959,31 +1119,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3eeb.html">
+                <a href="/posts/de73.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201144.png" class="responsive-img" alt="Markdown常用格式">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201613.png" class="responsive-img" alt="Java基础.2 简单的Java程序">
                         
-                        <span class="card-title">Markdown常用格式</span>
+                        <span class="card-title">Java基础.2 简单的Java程序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            轻量级标记语言Markdown使用指南
+                            Java程序的类型与基本构成；开发Java程序的基本步骤；程序中进行输入输出
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -993,12 +1153,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>

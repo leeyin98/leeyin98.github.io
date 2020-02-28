@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="个人简历, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="个人简历制作中">
+    <meta name="keywords" content="Java基础.4  类、包和接口, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="类、字段、方法；类的继承；访问控制修饰符；">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>个人简历 | 探赜索隐</title>
+    <title>Java基础.4  类、包和接口 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -369,7 +369,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '37b7b8ceefdb206b10df8c61f5e8a8e2239a5d6a16c54a2c06a303037799a34d';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -382,12 +382,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228200601.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201613.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">个人简历</h1>
+                    <h1 class="description center-align post-title">Java基础.4  类、包和接口</h1>
                 </div>
             </div>
         </div>
@@ -502,12 +502,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -516,7 +533,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-27
+                    2020-02-28
                 </div>
                 
 
@@ -525,14 +542,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 				
@@ -548,90 +565,163 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次接触Markdown标记语言，于是找了些Markdown常用格式，在此留档。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>以下为Markdown常用格式</p>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
-<li>使用符号：#<blockquote>
-<p>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题<br>######六级标题<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：我楼下的列表俩字就是栗子</li>
+                <h1 id="第4讲-类、包和接口"><a href="#第4讲-类、包和接口" class="headerlink" title="第4讲 类、包和接口"></a>第4讲 类、包和接口</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第4讲主要讲述：类、字段、方法；类的继承；访问控制修饰符；</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-类、字段、方法"><a href="#1-类、字段、方法" class="headerlink" title="1. 类、字段、方法"></a>1. 类、字段、方法</h3><h4 id="1-1-类"><a href="#1-1-类" class="headerlink" title="1.1 类"></a>1.1 类</h4><ul>
+<li>组成java程序的基本要素</li>
+<li>字段（field）是类的属性，用变量表示</li>
+<li>方法（method）是类的功能和操作，用函数表示</li>
+<li>封装了一类对象的状态和方法，即它将变量和函数封装到一个类中，如<pre><code>class Person{
+  String name;    //变量
+  int age;     //变量
+  void sayHello(){        //函数
+      System.out.println("Hello!My name is"+name);
+  }
+}</code></pre><h4 id="1-2-构造方法"><a href="#1-2-构造方法" class="headerlink" title="1.2 构造方法"></a>1.2 构造方法</h4>用来初始化（new）该类的一个新的对象，如：<code>Person p = new Person()</code><br>构造方法和类名同名，且不写返回数据类型</li>
 </ul>
-<h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h3><ul>
-<li>使用符号：-<blockquote>
-<p>-文本1<br>-文本2<br>-文本3<br>有序列表可用1.,2.,3.等代替符号-来表示(???为什么我下面用了没实现)<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<ol>
-<li>我现在就是</li>
-<li>是个栗</li>
-<li>子</li>
-</ol>
+<h4 id="1-3-使用对象"><a href="#1-3-使用对象" class="headerlink" title="1.3 使用对象"></a>1.3 使用对象</h4><p>访问对象的字段或方法，需要用算符“.”  如：</p>
+<pre><code>Person p = new Person();
+System.out.println(p.name)；
+p.sayHello()；</code></pre><h4 id="1-4-方法重载"><a href="#1-4-方法重载" class="headerlink" title="1.4 方法重载"></a>1.4 方法重载</h4><ul>
+<li>多个方法有相同的名字，编译时也能识别出来</li>
+<li>这些同名方法的签名不同，或参数个数或参数类型不同</li>
+<li>通过方法重载可以实现多态</li>
+</ul>
+<h4 id="1-5-this的使用"><a href="#1-5-this的使用" class="headerlink" title="1.5 this的使用"></a>1.5 this的使用</h4><ul>
+<li>在方法及构造方法中，使用this来访问字段及方法</li>
+<li>解决局部变量与域同名的问题，如：<br>  ```<br>  Person(int age,String name){<pre><code>  this.age = age;    //this.age表示域变量，age表示参数变量
+  this.name = name;</code></pre>  }</li>
+<li>构造方法中，用this调用另一个构造方法，但调用语句必须放第一句</li>
+</ul>
+<h3 id="2-类的继承"><a href="#2-类的继承" class="headerlink" title="2. 类的继承"></a>2. 类的继承</h3><h4 id="2-1-继承"><a href="#2-1-继承" class="headerlink" title="2.1 继承"></a>2.1 继承</h4><ul>
+<li>继承是面向对象的程序设计中最为重要的特征之一</li>
+<li>Java中的继承是通过extends关键词来实现的</li>
+<li>字类、父类或超类（父类包括直接或间接被继承的类）</li>
+<li>Java支持单继承：一个类只能有一个直接父类</li>
+<li>子类继承父类的状态和行为(字段和方法，构造方法不可继承）<br>  -可以修改父类的状态或重载父类的行为(字段和方法）<br>  -可以添加新的状态和行为(字段和方法）</li>
+</ul>
+<h4 id="2-2-super的使用"><a href="#2-2-super的使用" class="headerlink" title="2.2 super的使用"></a>2.2 super的使用</h4><ul>
+<li>使用super访问父类的域和方法，this也可以，但用super更加明确</li>
+<li>有时需要使用super以区别同名的域与方法</li>
+<li>构造方法不可继承，但子类在构造方法中可以用super来调用父类的构造方法<ul>
+<li>使用时，super()必须放在第一句</li>
+</ul>
 </li>
 </ul>
-<h3 id="3-链接和图片"><a href="#3-链接和图片" class="headerlink" title="3.链接和图片"></a>3.链接和图片</h3><ul>
-<li>使用符号：!,[]和() <blockquote>
-<p>插入链接格式：[] (),[]内填写文本信息，()内填写链接地址<br>插入图片格式：! [] ()，[]内留空，()内填写图片地址<br>注：各个符号间不留空</p>
-</blockquote>
-</li>
-<li>例：<br>链接：<a href="https://leeyin98.com/posts/3eeb.html" target="_blank" rel="noopener">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
+<h4 id="2-3-父类对象与子类对象的转换"><a href="#2-3-父类对象与子类对象的转换" class="headerlink" title="2.3 父类对象与子类对象的转换"></a>2.3 父类对象与子类对象的转换</h4><ul>
+<li>子类对象可以被视为其父类的一个对象</li>
+<li>父类对象不能被当做其子类的一个对象</li>
+<li>若一个方法的形式参数定义的是父类对象，那么调用该方法时，可以使用子类对象作为实际参数</li>
+<li>若父类对象引用指向的实际是一个子类对象，那么这个父类对象的引用可以用强制类型转换成子类对象的引用</li>
 </ul>
-<h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h3><ul>
-<li>使用符号：&gt;<blockquote>
-<p>模板：&gt; 文本信息，&gt;&gt; 文本信息<br>需要引用时，文字前添加符号&gt;即可，&gt;&gt;表示引用内再次引用<br>注：符号&gt;和文本要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<blockquote>
-<p>我是一<br>个栗<br>子</p>
-</blockquote>
+<h4 id="2-4-package包"><a href="#2-4-package包" class="headerlink" title="2.4 package包"></a>2.4 package包</h4><ul>
+<li><code>package pkg1[.pkg2[.pkg3…..]]</code></li>
+<li>包与子包的定义，实际是为了解决名字空间、名字冲突</li>
+<li>与类的继承无关，一个子类与其父类可位于不同的包中</li>
+<li>同一个包中的各个类，默认情况下可互相访问</li>
+<li>使用java中已提供的类，需要用import语句来导入所需要的类。</li>
+<li>语句格式：<code>import package1[.package2…].(classname|*)</code>;如：<ul>
+<li><code>import java.awt.event.*;</code></li>
+</ul>
 </li>
 </ul>
-<h3 id="5-字体"><a href="#5-字体" class="headerlink" title="5.字体"></a>5.字体</h3><ul>
-<li>使用符号： *<blockquote>
-<p>粗体：用两个符号<em>包含一段文字<br>斜体：用一个符号</em>包含一段文字</p>
-</blockquote>
-</li>
-<li>例：举个栗子，<em>我是斜体</em>，<strong>我是粗体</strong>。</li>
-</ul>
-<h3 id="6-代码应用"><a href="#6-代码应用" class="headerlink" title="6.代码应用"></a>6.代码应用</h3><ul>
-<li>使用符号：`<blockquote>
-<p>引用一行：用符号`包含语句<br>引用多行：将符号```置于代码的首行与末行</p>
-</blockquote>
-</li>
-<li>例：<br>  单行：<code>This is a chestnut</code><br>  多行：<pre><code>  This
-     is
-       a
-        chestnut</code></pre></li>
-</ul>
-<h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7.表格"></a>7.表格</h3><ul>
-<li>使用符号：|，-和:</li>
-<li>例：<table>
+<h3 id="3-访问控制修饰符"><a href="#3-访问控制修饰符" class="headerlink" title="3. 访问控制修饰符"></a>3. 访问控制修饰符</h3><h4 id="3-1-可见性，即能在哪些地方被使用"><a href="#3-1-可见性，即能在哪些地方被使用" class="headerlink" title="3.1 可见性，即能在哪些地方被使用"></a>3.1 可见性，即能在哪些地方被使用</h4><table>
 <thead>
 <tr>
-<th>栗子No.x</th>
-<th align="center">优点</th>
-<th align="right">价格</th>
+<th></th>
+<th align="center">同一个类中</th>
+<th align="center">同一个包中</th>
+<th align="center">不同包中的子类</th>
+<th align="center">不包中的非子类</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>栗子No.0</td>
-<td align="center">又长又宽</td>
-<td align="right">$1024</td>
+<td>private</td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>栗子No.1</td>
-<td align="center">又大又圆</td>
-<td align="right">$512</td>
+<td>默认</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr>
-<td>栗子No.2</td>
-<td align="center">好吃</td>
-<td align="right">$256</td>
+<td>protected</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>public</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
 </tr>
 </tbody></table>
+<h4 id="3-2-private修饰"><a href="#3-2-private修饰" class="headerlink" title="3.2 private修饰"></a>3.2 private修饰</h4><p>将字段用private修饰，用setXXXX与getXXXX方法对类的属性进行存取<br>优点：</p>
+<ul>
+<li>属性用prvate更好地封装和隐藏，外部类不能随意存取和修改</li>
+<li>提供方法来存取对象的属性，在方法中可以对给定的参数的合法性进行校验</li>
+<li>方法可以用来给出计算后的值</li>
+<li>方法可以完成其他必要的工作（如清理资源、设定状态等）</li>
+<li>只提供getXXXX方法，而不提供setXXXX方法，可以保证属性是只读的<br>例：<pre><code>class Person2
+{
+  private int age;
+  public void setAge(int age){
+      if(age&gt;0 &amp;&amp; age&lt;200) this.age = age;
+  }
+  public int getAge(){
+      return age;
+  }
+}</code></pre></li>
+</ul>
+<h4 id="3-3-非访问控制符"><a href="#3-3-非访问控制符" class="headerlink" title="3.3 非访问控制符"></a>3.3 非访问控制符</h4><table>
+<thead>
+<tr>
+<th></th>
+<th align="center">基本含义</th>
+<th align="center">修饰类</th>
+<th align="center">修饰成员</th>
+<th align="center">修饰局部变量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>static</td>
+<td align="center">静态的、非实例的、类的</td>
+<td align="center">可修饰内部类</td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>final</td>
+<td align="center">最终的、不可改变的</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>abstract</td>
+<td align="center">抽象的、不可实例化的</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="3-4-接口-interface"><a href="#3-4-接口-interface" class="headerlink" title="3.4 接口(interface)"></a>3.4 接口(interface)</h4><ul>
+<li>定义接口interface，如<code>interface Collection{....}</code></li>
+<li>实现接口implements，如<code>class FIFOQueue implements Collection{...}</code></li>
+<li>作用：<ul>
+<li>通过接口可以实现不相关类的相同行为，而不需要考虑这些类之间的层次关系，从而在一定意义上实现了多重继承</li>
+<li>通过接口可以指明多个类需要实现的方法</li>
+<li>通过接口可以了解对象的交互界面，而不需要了解对象所对应的类</li>
+</ul>
 </li>
 </ul>
-<p><code>Over!!!</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -675,7 +765,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://leeyin98.github.io/posts/cf60.html">http://leeyin98.github.io/posts/cf60.html</a>
+                    <a href="http://leeyin98.github.io/posts/dcf3.html">http://leeyin98.github.io/posts/dcf3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -712,7 +802,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -881,7 +979,7 @@
         repo: 'gittalk',
         owner: 'leeyin98',
         admin: "leeyin98",
-        id: '2020-02-27T19-33-00',
+        id: '2020-02-28T13-15-56',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -906,19 +1004,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/7a13.html">
+                <a href="/posts/1c32.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png" class="responsive-img" alt="Java基础.1 Java语言与面向对象的程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202008.png" class="responsive-img" alt="Java基础5. 深入理解Java语言">
                         
-                        <span class="card-title">Java基础.1 Java语言与面向对象的程序设计</span>
+                        <span class="card-title">Java基础5. 深入理解Java语言</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语言的历史和发展；Java程序的编译及运行
+                            变量及其传递；多态及虚方法调用；对象的构造与初始化；对象清除与垃圾回收；内部类与匿名类；其他几个高级语法；没有指针的Java语言
                         
                     </div>
                     <div class="publish-info">
@@ -959,31 +1057,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3eeb.html">
+                <a href="/posts/1eb2.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201144.png" class="responsive-img" alt="Markdown常用格式">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202249.png" class="responsive-img" alt="Java基础.3 数据运算、流控制和数组">
                         
-                        <span class="card-title">Markdown常用格式</span>
+                        <span class="card-title">Java基础.3 数据运算、流控制和数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            轻量级标记语言Markdown使用指南
+                            数据类型、变量与常量；运算符与表达式；流程控制语句；数组
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -993,12 +1091,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
