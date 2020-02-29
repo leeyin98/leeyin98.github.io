@@ -112,49 +112,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="" class="waves-effect waves-light">
-
-      
-      <i class="fas fa-list" style="zoom: 0.6;"></i>
-      
-      <span>菜单</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a href="/movies">
-          
-          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>视频</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/books">
-          
-          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>书籍</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/galleries">
-          
-          <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>图库</span>
-        </a>
-      </li>
-      
-    </ul>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -243,51 +200,6 @@
 			
 			Contact
 		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fa-fw fas fa-list"></i>
-			
-			菜单
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>   
-				
-                  <a href="/movies " style="margin-left:75px";>
-				  
-				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
-			      
-		          <span>视频</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/books " style="margin-left:75px";>
-				  
-				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
-			      
-		          <span>书籍</span>
-                  </a>
-                </li>
-              
-                <li>   
-				
-                  <a href="/galleries " style="margin-left:75px";>
-				  
-				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
-			      
-		          <span>图库</span>
-                  </a>
-                </li>
-               
-            </ul>
           
         </li>
         
@@ -421,21 +333,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">14</a></span>
+    <span class="count"><a href="/">16</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
+    <span class="count"><a href="/categories">4</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">6</a></span>
+    <span class="count"><a href="/tags">7</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -451,21 +363,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">14</a></span>
+    <span class="count"><a href="/">16</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
+    <span class="count"><a href="/categories">4</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">6</a></span>
+    <span class="count"><a href="/tags">7</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -611,7 +523,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,14],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,16],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -653,7 +565,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"笔记","value":7},{"name":"问题记录及解决","value":1},{"name":"教程","value":1}],
+                data: [{"name":"笔记","value":7},{"name":"问题记录及解决","value":2},{"name":"教程","value":1},{"name":"视频剪辑","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -677,7 +589,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Java","笔记","问题记录及解决","Hexo","Markdown","教程"]
+                data: ["Java","笔记","问题记录及解决","视频剪辑","Hexo","Markdown","教程"]
             }
         ],
         yAxis: [
@@ -690,7 +602,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [7,7,1,1,1,1],
+                data: [8,7,2,2,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -838,6 +750,12 @@
             </a>
             
             
+            
+            <a href="/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/">
+                <span class="chip center-align waves-effect waves-light chip-default">视频剪辑</span>
+            </a>
+            
+            
         </div>
     </div>
     
@@ -864,7 +782,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.1k</span>&nbsp;字
+                class="white-color">9.3k</span>&nbsp;字
             
             
             
