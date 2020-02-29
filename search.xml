@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Hexo中爬取豆瓣问题</title>
+      <link href="/posts/6a56.html"/>
+      <url>/posts/6a56.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h3><p>Hexo中爬取豆瓣书单影单后，图片一直在加载的问题，如下图：<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200229164830.png" alt=""></p><h3 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h3><p>‘暂未发现’</p><h3 id="3-解决方法"><a href="#3-解决方法" class="headerlink" title="3. 解决方法"></a>3. 解决方法</h3><p>‘待解决’</p><h5 id="问题解决参考来源"><a href="#问题解决参考来源" class="headerlink" title="问题解决参考来源"></a>问题解决参考来源</h5><p>暂无</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题记录及解决 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 问题记录及解决 </tag>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【鬼灭/踩点/燃向】日之呼吸 肆之型 无惨陪我晒太阳</title>
       <link href="/posts/4a18.html"/>
       <url>/posts/4a18.html</url>

@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础5. 深入理解Java语言, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="变量及其传递；多态及虚方法调用；对象的构造与初始化；对象清除与垃圾回收；内部类与匿名类；其他几个高级语法；没有指针的Java语言">
+    <meta name="keywords" content="Hexo中爬取豆瓣问题, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="Hexo中爬取豆瓣书单影单后，图片一直在加载的问题">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java基础5. 深入理解Java语言 | 探赜索隐</title>
+    <title>Hexo中爬取豆瓣问题 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -363,12 +363,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202008.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201144.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础5. 深入理解Java语言</h1>
+                    <h1 class="description center-align post-title">Hexo中爬取豆瓣问题</h1>
                 </div>
             </div>
         </div>
@@ -485,12 +485,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+                                <span class="chip bg-color">问题记录及解决</span>
                             </a>
                         
-                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
                             </a>
                         
                     </div>
@@ -501,8 +501,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                笔记
+                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/" class="post-category">
+                                问题记录及解决
                             </a>
                         
                     </div>
@@ -514,7 +514,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-28
+                    2020-02-29
                 </div>
                 
 
@@ -523,14 +523,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    108
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    1 分
                 </div>
                 
 				
@@ -546,190 +546,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第5讲-深入理解Java语言"><a href="#第5讲-深入理解Java语言" class="headerlink" title="第5讲 深入理解Java语言"></a>第5讲 深入理解Java语言</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第5讲主要讲述：变量及其传递；多态及虚方法调用；对象的构造与初始化；对象清除与垃圾回收；内部类与匿名类；其他几个高级语法；没有指针的Java语言</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-变量及其传递"><a href="#1-变量及其传递" class="headerlink" title="1. 变量及其传递"></a>1. 变量及其传递</h3><h4 id="1-1-变量类型及含义"><a href="#1-1-变量类型及含义" class="headerlink" title="1.1 变量类型及含义"></a>1.1 变量类型及含义</h4><ul>
-<li>基本类型变量：其值直接存在于变量中</li>
-<li>引用类型变量：变量占据预定的内存空间，其所引用的对象实体(由new创建)也要占据一定的空间</li>
-<li>字段变量：存在于类中</li>
-<li>局部变量：方法中定义的变量和方法的参变量</li>
-</ul>
-<h4 id="1-2-字段变量与局部变量的比较："><a href="#1-2-字段变量与局部变量的比较：" class="headerlink" title="1.2 字段变量与局部变量的比较："></a>1.2 字段变量与局部变量的比较：</h4><blockquote>
-<ol>
-<li>字段变量为对象的一部分、存在于堆中，局部变量存在于栈中</li>
-<li>字段变量随对象创建而产生，局部变量在调用方法时产生，方法结束后释放</li>
-<li>字段变量可以自动赋初值，局部变量则须显式赋值,如<pre><code>class Test()
-{
-int a;      //字段变量
-void m(){
-    intb;       //局部变量
-    System.out.println(b);  //编译不能通过，需要初始化b
-}
-}</code></pre></li>
-<li>字段变量属于类，可以用public,private,static,final修饰</li>
-<li>局部变量不能被访问控制符及static修饰，但都能被final修饰</li>
-<li>调用对象方法时要传递参数</li>
-<li>Java是值传递，即将表达式的值赋值给形式参数</li>
-<li>对于引用型变量，传递的值是引用值，而不是赋值对象实体(可改变对象属性)</li>
-</ol>
-</blockquote>
-<h3 id="2-多态及虚方法调用"><a href="#2-多态及虚方法调用" class="headerlink" title="2. 多态及虚方法调用"></a>2. 多态及虚方法调用</h3><p>多态的两种情形：</p>
-<ul>
-<li>编译时多态：重载（overload）多个同名的不同方法<br> 例：<code>p.sayHello();   p.sayHello("Wang");</code></li>
-<li>运行时多态：覆盖（override）子类对父类方法进行覆盖<ul>
-<li>在调用方法时，程序会自动正确地调用子类对象的方法</li>
-</ul>
-</li>
-</ul>
-<p>上溯造型：可以把派生类型当做基本类型处理<br>例：<code>Person p = new Student();</code></p>
-<h3 id="3-对象的构造与初始化"><a href="#3-对象的构造与初始化" class="headerlink" title="3. 对象的构造与初始化"></a>3. 对象的构造与初始化</h3><h4 id="3-1-构造方法"><a href="#3-1-构造方法" class="headerlink" title="3.1 构造方法"></a>3.1 构造方法</h4><p>对象都有构造方法，抽象类(abstract)也有构造方法，若没有，编译器会加一个default构造方法</p>
-<h4 id="3-2-调用本类或父类的构造方法"><a href="#3-2-调用本类或父类的构造方法" class="headerlink" title="3.2 调用本类或父类的构造方法"></a>3.2 调用本类或父类的构造方法</h4><ul>
-<li>this调用本类的其他构造方法</li>
-<li>super调用直接父类的构造方法</li>
-<li>this或super要放在第一条语句，且只能有一条</li>
-<li>若没有this和super，编译器会自动加上super，调用直接父类不带参数的构造方法</li>
-</ul>
-<h4 id="3-3-创建对象时初始化"><a href="#3-3-创建对象时初始化" class="headerlink" title="3.3 创建对象时初始化"></a>3.3 创建对象时初始化</h4><p>例： p=new Person(){{ age=18;name="leeyin98";}}; <br>这样可以针对没有相应构造函数，但又要赋值，注意双括号<br>实例初始化:</p>
-<ul>
-<li>在类中直接写语句，{ 语句… }<br>静态初始化:</li>
-<li>static{ 语句… }</li>
-<li>静态初始化在一地刺使用这个类时要执行</li>
-</ul>
-<h4 id="3-4-构造方法的执行过程"><a href="#3-4-构造方法的执行过程" class="headerlink" title="3.4 构造方法的执行过程"></a>3.4 构造方法的执行过程</h4><ol>
-<li>调用本类或父类的构造方法，直至最高一层（Object）</li>
-<li>按照声明顺序执行字段的初始化赋值</li>
-<li>执行构造函数中的语句<br><code>总结</code>：先父类构造，再本类成员赋值，最后执行构造方法中的语句</li>
-</ol>
-<h3 id="4-对象清除与垃圾回收"><a href="#4-对象清除与垃圾回收" class="headerlink" title="4. 对象清除与垃圾回收"></a>4. 对象清除与垃圾回收</h3><ul>
-<li>try-with-resources语句<pre><code>对于实现了java.lang.AutoCloseable的对象，
-try(Scanner scanner = new Scanner(...)){
-  代码块
-}
-会自动调用close()方法，相当于：
-finally{
-  Scanner.close();
-}</code></pre>注：<code>当try第一个花括号结束后，会自动调用对象的close()方法，无论花括号内的程序是否正常</code></li>
-</ul>
-<h3 id="5-内部类与匿名类"><a href="#5-内部类与匿名类" class="headerlink" title="5. 内部类与匿名类"></a>5. 内部类与匿名类</h3><h4 id="5-1-定义"><a href="#5-1-定义" class="headerlink" title="5.1 定义"></a>5.1 定义</h4><p>内部类：在其他类中再定义的类<br>匿名类：是一种特殊的内部类，没有类型</p>
-<h4 id="5-2-内部类的定义及使用"><a href="#5-2-内部类的定义及使用" class="headerlink" title="5.2 内部类的定义及使用"></a>5.2 内部类的定义及使用</h4><h5 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h5><ul>
-<li>将类的定义<code>class xxxx{…}</code>置入一个类的内部即可</li>
-<li>编译器生成<code>xxxx$xxxx</code>这样的class文件</li>
-<li>内部类不能与外部类同名<h5 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h5></li>
-<li>在封装它的类的内部使用内部类时，与普通类的使用方式相同</li>
-<li>在其他地方使用时，类名前要冠以外部类的名字</li>
-<li>在用new创建内部类时，也要在new前面冠以对象变量<br>  例：<code>外部对象名.new 内部类名(参数)</code></li>
-<li>内部类中可以直接访问外部类的字段及方法（即使private也可以）</li>
-<li>若内部类中又与外部类同名的字段或方法，则可用 <code>外部类名.this.字段及方法</code></li>
-</ul>
-<h4 id="5-3-内部类的修饰符"><a href="#5-3-内部类的修饰符" class="headerlink" title="5.3 内部类的修饰符"></a>5.3 内部类的修饰符</h4><p>内部类与类中的字段、方法一样是外部类的成员，它的前面也可以有访问控制符合其他修饰符（public,protected,private及默认，final,abstract），而外部类只能用public或默认</p>
-<h4 id="5-4-static修饰符"><a href="#5-4-static修饰符" class="headerlink" title="5.4 static修饰符"></a>5.4 static修饰符</h4><ul>
-<li>用static修饰内部类时，则表明内部类实际是一种外部类(因为它与外部类的实例无关)</li>
-<li>实例化static类时，在new前面不需要用对象实例变量;</li>
-<li>static类中不能访问其外部类的非stati字段及方法，即只能访问static成员</li>
-<li>static方法中不能访问非static的域及方法，也不能不带前缀地new一个非static的内部类</li>
-</ul>
-<h4 id="5-5-局部类"><a href="#5-5-局部类" class="headerlink" title="5.5 局部类"></a>5.5 局部类</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>在一个方法中也可以定义类，这种类称为”方法中的内部类”，即局部类</p>
-<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><ul>
-<li>同局部变量一样，不能被public,private,protected,static修饰，但能被final或abstract修饰</li>
-<li>可以访问其外部类的成员</li>
-<li>不能访问该方法的局部变量，除非是final局部变量</li>
-</ul>
-<h4 id="5-6-匿名类"><a href="#5-6-匿名类" class="headerlink" title="5.6 匿名类"></a>5.6 匿名类</h4><h5 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h5><p>匿名类是一种没有类名的特殊的内部类，在定义类的同时生成该对象的一个实例</p>
-<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><ul>
-<li>不取名字，直接用其父类或接口的名字，也就是说该类时父类的子类或实现了一个接口</li>
-<li>类的定义的同时就创建实例，即类的定义前面有一个new，不使用关键词class也不实用extends及implements（例：<code>new 类名或接口名 () {….}</code>）</li>
-<li>在构造对象时使用父类构造方法，不能定义构造方法</li>
-</ul>
-<h5 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h5><ul>
-<li>界面的时间处理，即注册一个事件监听器</li>
-<li>作为方法的参数，即给一个比较大小的接口并排序</li>
-</ul>
-<h4 id="5-7-Lambda表达式"><a href="#5-7-Lambda表达式" class="headerlink" title="5.7 Lambda表达式"></a>5.7 Lambda表达式</h4><ul>
-<li>大体相当于其他语言的“函数指针”，在Java中实际上是“匿名类的一个实例”</li>
-<li>Lambda表达式是接口或者说是接口函数的简写，可用于线程、积分和按钮事件处理等问题中<h5 id="基本写法"><a href="#基本写法" class="headerlink" title="基本写法"></a>基本写法</h5><code>(参数) -&gt; 结果</code>  例：<code>(String s) -&gt; s.length()</code>  , <code>x -&gt; x*x</code><br>  这里的参数是()或1个参数或(多个参数)，结果是指表达式或语句或{语句}<h5 id="使用条件"><a href="#使用条件" class="headerlink" title="使用条件"></a>使用条件</h5>能写成Lambda的接口要求包含且最多只能有一个抽象函数<br>例：<pre><code>Runnable dolt = new Runnable(){
-  public void run(){
-      System.out.println("leeyin98");
-  }
-};
-new Thread(dolt).start();
-使用Lambda可简写成：
-Runnable doIt = () -&gt;System.out.println("leeyin98");
-new thread(doIt).start();
-再进一步简写：
-new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
-</ul>
-<h3 id="6-其他几个高级语法"><a href="#6-其他几个高级语法" class="headerlink" title="6. 其他几个高级语法"></a>6. 其他几个高级语法</h3><h4 id="6-1-基本类型的包装类"><a href="#6-1-基本类型的包装类" class="headerlink" title="6.1 基本类型的包装类"></a>6.1 基本类型的包装类</h4><p>将基本类型包装成Object(引用类型)，如int→Interger<br>共8类：Boolean,Byte,Short,Character,Integer,Long,Float,Double</p>
-<h4 id="6-2-装箱与拆箱"><a href="#6-2-装箱与拆箱" class="headerlink" title="6.2 装箱与拆箱"></a>6.2 装箱与拆箱</h4><ul>
-<li>装箱(Boxing)，将基本类型数值直接赋值给引用类型。如Interger I=10;</li>
-<li>拆箱(Unboxing)，将一个引用类型复制到基本类型数值中去。如int i=I;</li>
-</ul>
-<h4 id="6-3-枚举"><a href="#6-3-枚举" class="headerlink" title="6.3 枚举"></a>6.3 枚举</h4><p>枚举是一种特殊的class类型<br>在简单情况下，用法与其他语言相似，如<code>enum Light {Red,Yellow,Green};</code><br>自定义枚举，可在enum定义体重，添加字段、方法和构造方法，例：</p>
-<pre><code>enum Direction
-{
-    EAST("东",1),SOUTH("南",2),WEST("西",3),NORTH("北",4);
-    Private Direction(String desc,int num){
-        this.desc=desc;
-        this.num=num;
-    }
-    private String desc;
-    private int num;
-    public String getDesc(){return desc;}
-    public int getNum(){return num;}
-}</code></pre><h4 id="6-4-注解"><a href="#6-4-注解" class="headerlink" title="6.4 注解"></a>6.4 注解</h4><p>在各种语法要素上加上附加信息，以供编译器或其他程序使用<br>常用的注解，如：</p>
-<ul>
-<li>@Override——表示覆盖父类的方法</li>
-<li>@Deprecated——表示过时的方法</li>
-<li>@SuppressWarnings——表示让编译器不产生警告</li>
-</ul>
-<h3 id="7-没有指针的Java语言"><a href="#7-没有指针的Java语言" class="headerlink" title="7. 没有指针的Java语言"></a>7. 没有指针的Java语言</h3><h4 id="7-1-引用与指针"><a href="#7-1-引用与指针" class="headerlink" title="7.1 引用与指针"></a>7.1 引用与指针</h4><p>在Java中，引用实质就是指针，但它是受控的且安全的，比如</p>
-<ul>
-<li>会检查空指引</li>
-<li>没有指针运算</li>
-<li>不能访问没有引用到的内存</li>
-<li>自动回收垃圾</li>
-</ul>
-<h4 id="7-2-C语言指针在Java中的体现"><a href="#7-2-C语言指针在Java中的体现" class="headerlink" title="7.2 C语言指针在Java中的体现"></a>7.2 C语言指针在Java中的体现</h4><table>
-<thead>
-<tr>
-<th>C</th>
-<th align="center">JAVA</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>传地址</td>
-<td align="center">对象</td>
-</tr>
-<tr>
-<td>指针运算</td>
-<td align="center">数组</td>
-</tr>
-<tr>
-<td>函数指针</td>
-<td align="center">接口、Lambda表达式</td>
-</tr>
-<tr>
-<td>指向节点的指针</td>
-<td align="center">对象的引用</td>
-</tr>
-<tr>
-<td></td>
-<td align="center">JNI:与其他语言代码进行交互</td>
-</tr>
-</tbody></table>
-<h4 id="7-3-相等判断（-）"><a href="#7-3-相等判断（-）" class="headerlink" title="7.3 相等判断（==）"></a>7.3 相等判断（==）</h4><ul>
-<li>基本类型：判断值是否相等<ul>
-<li>数值类型，转换后比较</li>
-<li>浮点数，最好不直接用==</li>
-<li>Double.NAN==Double.NAN结果为false</li>
-<li>boolean型无法与int比较<br>如：<br>```</li>
-</ul>
-</li>
-</ul>
-<p>1.<br>Integer i = new Integer(10);<br>Integer j = new Integer(10);<br>System.out.printlb(i==n);   //false,因为对象是两个<br>2.<br>Integer m = 10;<br>Integer n = 10;<br>System.out.println(m==n);   //true,因为对象有缓存，缓存区间：-128~127<br>3.<br>Integer p = 200;<br>Integer q = 200;<br>System.out.println(p==q);   //false,因为对象是两个</p>
-<p>```</p>
-<ul>
-<li>引用类型：判断引用是否一样<br>若要判断内容是否一样，则要重写equals方法，那最好重写hashCode()方法</li>
-</ul>
-<h4 id="7-4-String对象的特殊性"><a href="#7-4-String对象的特殊性" class="headerlink" title="7.4 String对象的特殊性"></a>7.4 String对象的特殊性</h4><p>String对象判断是否相等，一定不要用==，要用equals。（变量）<br>但字符串常量的相等还是用==</p>
+                <h3 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h3><p>Hexo中爬取豆瓣书单影单后，图片一直在加载的问题，如下图：<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200229164830.png" alt=""></p>
+<h3 id="2-问题原因"><a href="#2-问题原因" class="headerlink" title="2. 问题原因"></a>2. 问题原因</h3><p>‘暂未发现’</p>
+<h3 id="3-解决方法"><a href="#3-解决方法" class="headerlink" title="3. 解决方法"></a>3. 解决方法</h3><p>‘待解决’</p>
+<h5 id="问题解决参考来源"><a href="#问题解决参考来源" class="headerlink" title="问题解决参考来源"></a>问题解决参考来源</h5><p>暂无</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -773,7 +593,7 @@ new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://leeyin98.github.io/posts/1c32.html">http://leeyin98.github.io/posts/1c32.html</a>
+                    <a href="http://leeyin98.github.io/posts/6a56.html">http://leeyin98.github.io/posts/6a56.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -811,12 +631,12 @@ new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+                                    <span class="chip bg-color">问题记录及解决</span>
                                 </a>
                             
-                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
                                 </a>
                             
                         </div>
@@ -987,7 +807,7 @@ new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
         repo: 'gittalk',
         owner: 'leeyin98',
         admin: "leeyin98",
-        id: '2020-02-28T13-16-14',
+        id: '2020-02-29T16-44-01',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1008,50 +828,52 @@ new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/1d72.html">
+                <a href="/posts/6a56.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/4.jpg" class="responsive-img" alt="Java基础6. 异常处理与程序调试">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201144.png" class="responsive-img" alt="Hexo中爬取豆瓣问题">
                         
-                        <span class="card-title">Java基础6. 异常处理与程序调试</span>
+                        <span class="card-title">Hexo中爬取豆瓣问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            异常处理；自定义异常；断言及程序的测试；程序的调试
+                            Hexo中爬取豆瓣书单影单后，图片一直在加载的问题
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/" class="post-category">
+                                    问题记录及解决
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+                        <span class="chip bg-color">问题记录及解决</span>
                     </a>
                     
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
@@ -1065,31 +887,30 @@ new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/dcf3.html">
+                <a href="/posts/4a18.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200229155446.png" class="responsive-img" alt="【鬼灭/踩点/燃向】日之呼吸 肆之型 无惨陪我晒太阳">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201613.png" class="responsive-img" alt="Java基础.4  类、包和接口">
-                        
-                        <span class="card-title">Java基础.4  类、包和接口</span>
+                        <span class="card-title">【鬼灭/踩点/燃向】日之呼吸 肆之型 无惨陪我晒太阳</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            类、字段、方法；类的继承；访问控制修饰符；
+                            第一个视频剪辑作品的改进版，《鬼灭之刃》
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/" class="post-category">
+                                    视频剪辑
                                 </a>
                             
                             
@@ -1099,12 +920,8 @@ new Thread(()-&gt;System.out.println("leeyin98")).start();</code></pre></li>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/">
+                        <span class="chip bg-color">视频剪辑</span>
                     </a>
                     
                 </div>
