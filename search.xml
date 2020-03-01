@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Java知识笔记7</title>
+      <link href="/posts/ddb3.html"/>
+      <url>/posts/ddb3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="第5讲-异常处理与程序调试"><a href="#第5讲-异常处理与程序调试" class="headerlink" title="第5讲 异常处理与程序调试"></a>第5讲 异常处理与程序调试</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第6讲主要讲述：异常处理；自定义异常；断言及程序的测试；程序的调试</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-异常处理"><a href="#1-异常处理" class="headerlink" title="1. 异常处理"></a>1. 异常处理</h3><h4 id="1-1-异常定义"><a href="#1-1-异常定义" class="headerlink" title="1.1 异常定义"></a>1.1 异常定义</h4><p>异常，对应着Java运行错误的处理机制</p><h5 id="基本写法"><a href="#基本写法" class="headerlink" title="基本写法"></a>基本写法</h5><pre><code>try{    语句组;}catch(Exception ex){    异常处理语句组;}</code></pre><h5 id="异常处理流程"><a href="#异常处理流程" class="headerlink" title="异常处理流程"></a>异常处理流程</h5><p>1.抛出(throw)异常<br>2.运行时系统在调用栈中查找<br>3.捕获(catch)异常的代码<br>相关语句：</p><pre><code>抛出异常：`throw 异常对象;`捕获异常：try{    语句组}catch(异常类名 异常形式参数名){    异常处理语句组;}catch(异常类名 异常形式参数名){    异常处理语句组;}finally{    异常处理语句组;}其中，catch语句可以是0或多个，可以没有fanally语句</code></pre><h4 id="1-2-异常分类"><a href="#1-2-异常分类" class="headerlink" title="1.2 异常分类"></a>1.2 异常分类</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode.01 两数之和</title>
       <link href="/posts/6630.html"/>
       <url>/posts/6630.html</url>
@@ -207,19 +234,6 @@
       <title>Java知识笔记8</title>
       <link href="/posts/d9f3.html"/>
       <url>/posts/d9f3.html</url>
-      
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java知识笔记7</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
       
         <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
