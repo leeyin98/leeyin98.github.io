@@ -527,7 +527,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    407
+                    403
                 </div>
                 
 
@@ -550,44 +550,47 @@
 <pre><code>给定 nums = [2, 7, 11, 15], target = 9
 
 因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]</code></pre><h2 id="2-第一遍解法"><a href="#2-第一遍解法" class="headerlink" title="2. 第一遍解法"></a>2. 第一遍解法</h2><pre><code>class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        for(int n=0;n&lt;nums.length;n++){
-            for(int m=n+1;m&lt;nums.length;m++){
-                if(nums[m]==target-nums[n]){
-                     return new int[]{n,m};
-                }                  
-            }
-        }
-            throw new IllegalArgumentException("No two sum solution");
-    }
-}</code></pre><h2 id="3-网上的优解"><a href="#3-网上的优解" class="headerlink" title="3. 网上的优解"></a>3. 网上的优解</h2><h3 id="3-1-两遍哈希表"><a href="#3-1-两遍哈希表" class="headerlink" title="3.1 两遍哈希表"></a>3.1 两遍哈希表</h3><pre><code>class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
-        for (int i = 0; i &lt; nums.length; i++) {
-            map.put(nums[i], i);
-        }
-        for (int i = 0; i &lt; nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement) &amp;&amp; map.get(complement) != i) {
-                return new int[] { i, map.get(complement) };
-            }
-        }
-        throw new IllegalArgumentException("No two sum solution");
-    }
-}</code></pre><h3 id="3-2-一遍哈希表"><a href="#3-2-一遍哈希表" class="headerlink" title="3.2 一遍哈希表"></a>3.2 一遍哈希表</h3><pre><code>class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
-        for (int i = 0; i &lt; nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
-            }
-            map.put(nums[i], i);
-        }
-        throw new IllegalArgumentException("No two sum solution");
-    }
-}</code></pre><h2 id="4-自己可改进的地方"><a href="#4-自己可改进的地方" class="headerlink" title="4. 自己可改进的地方"></a>4. 自己可改进的地方</h2><p>待补充</p>
+所以返回 [0, 1]</code></pre><h2 id="2-第一遍解法"><a href="#2-第一遍解法" class="headerlink" title="2. 第一遍解法"></a>2. 第一遍解法</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>n<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>n<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token operator">=</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>m<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>m<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token operator">-</span>nums<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                     <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>n<span class="token punctuation">,</span>m<span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>                  
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"No two sum solution"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="3-网上的优解"><a href="#3-网上的优解" class="headerlink" title="3. 网上的优解"></a>3. 网上的优解</h2><h3 id="3-1-两遍哈希表"><a href="#3-1-两遍哈希表" class="headerlink" title="3.1 两遍哈希表"></a>3.1 两遍哈希表</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> complement <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>complement<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>complement<span class="token punctuation">)</span> <span class="token operator">!=</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> i<span class="token punctuation">,</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>complement<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"No two sum solution"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="3-2-一遍哈希表"><a href="#3-2-一遍哈希表" class="headerlink" title="3.2 一遍哈希表"></a>3.2 一遍哈希表</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> complement <span class="token operator">=</span> target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>complement<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>complement<span class="token punctuation">)</span><span class="token punctuation">,</span> i <span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"No two sum solution"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="4-自己可改进的地方"><a href="#4-自己可改进的地方" class="headerlink" title="4. 自己可改进的地方"></a>4. 自己可改进的地方</h2><p>待补充</p>
 <h2 id="5-改进至最优解"><a href="#5-改进至最优解" class="headerlink" title="5. 改进至最优解"></a>5. 改进至最优解</h2><p>待补充</p>
 <h2 id="6-获得的思考"><a href="#6-获得的思考" class="headerlink" title="6. 获得的思考"></a>6. 获得的思考</h2><p>待补充</p>
 <h2 id="附：题目及解法参考来源"><a href="#附：题目及解法参考来源" class="headerlink" title="附：题目及解法参考来源"></a>附：题目及解法参考来源</h2><p><a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">力扣LeetCode</a></p>
@@ -1498,6 +1501,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
 
 </html>

@@ -523,7 +523,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    475
+                    474
                 </div>
                 
 
@@ -589,49 +589,51 @@
 <h3 id="3-程序中进行输入与输出"><a href="#3-程序中进行输入与输出" class="headerlink" title="3. 程序中进行输入与输出"></a>3. 程序中进行输入与输出</h3><h4 id="3-1-文本界面"><a href="#3-1-文本界面" class="headerlink" title="3.1 文本界面"></a>3.1 文本界面</h4><ul>
 <li>java.util.Scanner类<ul>
 <li>整数：nteger.parseInt(s);      </li>
-<li>实数：Double.parseDouble(s);    <pre><code>package test00;
-import java.util.Scanner;
-public class test00 {
-public static void main(String args[]){
-  Scanner scanner = new Scanner(System.in);
-  System.out.print("Please input a number:");
-  int a = scanner.nextInt();
-  System.out.print("%d的平方是%d\n,a,a*a)
-}
-}</code></pre></li>
+<li>实数：Double.parseDouble(s);    <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> test00<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">test00</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  Scanner scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Please input a number:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> a <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>"<span class="token operator">%</span>d的平方是<span class="token operator">%</span>d\n<span class="token punctuation">,</span>a<span class="token punctuation">,</span>a<span class="token operator">*</span>a<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
 </ul>
 </li>
 </ul>
-<h4 id="3-2-图形界面"><a href="#3-2-图形界面" class="headerlink" title="3.2 图形界面"></a>3.2 图形界面</h4><pre><code>package test00;
-improt java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-public calss test00
-{
-    public static void main(String args[])
-    {
-        new AppFrame();
-    }
-}
-class AppFrame extends JFrame
-{
-    JTextField in = new JTextField(10);
-    JButton btn = new JButton("求平方");
-    JLable out = new JLabel("用于显示结果的标签");
-}
-public AppFrame()
-{
-    setLayout(new FlowLayout());
-    getContentPane().add(in);
-    getContentPane().add(btn);
-    getContentPane().add(out);
-    btn.addActionListener(e -&gt;{
-        String s = in.getText();
-        Double d = Double.parseDouble(s);
-        double sq = Math.sqrt(d);
-        out.setText(d+"的平方根是："+sq)
-    })
-}</code></pre><ul>
+<h4 id="3-2-图形界面"><a href="#3-2-图形界面" class="headerlink" title="3.2 图形界面"></a>3.2 图形界面</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> test00<span class="token punctuation">;</span>
+improt java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+<span class="token keyword">public</span> calss test00
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">AppFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">AppFrame</span> <span class="token keyword">extends</span> <span class="token class-name">JFrame</span>
+<span class="token punctuation">{</span>
+    JTextField in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JTextField</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    JButton btn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"求平方"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    JLable out <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JLabel</span><span class="token punctuation">(</span><span class="token string">"用于显示结果的标签"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token function">AppFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FlowLayout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">getContentPane</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">getContentPane</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">getContentPane</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    btn<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>e <span class="token operator">-</span><span class="token operator">></span><span class="token punctuation">{</span>
+        String s <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Double d <span class="token operator">=</span> Double<span class="token punctuation">.</span><span class="token function">parseDouble</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">double</span> sq <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        out<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>d<span class="token operator">+</span><span class="token string">"的平方根是："</span><span class="token operator">+</span>sq<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
 <li>运行后：<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228141615.png" alt=""></li>
 </ul>
 <script>
@@ -1541,6 +1543,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
 
 </html>

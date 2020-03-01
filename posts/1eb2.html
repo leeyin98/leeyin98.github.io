@@ -545,10 +545,10 @@
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-数据类型、变量与常量"><a href="#1-数据类型、变量与常量" class="headerlink" title="1. 数据类型、变量与常量"></a>1. 数据类型、变量与常量</h3><h4 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1 数据类型"></a>1.1 数据类型</h4><ul>
 <li>基本类型：变量在栈</li>
 <li>引用类型：变量引用到堆<ul>
-<li>double d = 3;</li>
-<li>Person p = new Preson();<br>赋值时：</li>
-<li>double d2=d;     复制的是值</li>
-<li>Person p2=p;     复制的是引用<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228143215.png" alt=""></li>
+<li><code>double d = 3;</code></li>
+<li><code>Person p = new Preson();</code><br>赋值时：</li>
+<li><code>double d2=d;</code>    复制的是值</li>
+<li><code>Person p2=p;</code>    复制的是引用<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228143215.png" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -620,58 +620,60 @@
 <li>^：按位异或</li>
 </ol>
 <h4 id="2-6-移位运算符"><a href="#2-6-移位运算符" class="headerlink" title="2.6 移位运算符"></a>2.6 移位运算符</h4><ul>
-<li>左移：”a&lt;&lt;b;”  将二进制形式的a逐位左移b位，最低位空出的b位补0</li>
-<li>无符号右移：”a&gt;&gt;&gt;b;”  将二进制形式的a逐位右移b位，最低位空出的b位补0</li>
-<li>带符号右移：”a&gt;&gt;b;”  将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位</li>
+<li>左移：”<code>a&lt;&lt;b;</code>“  将二进制形式的a逐位左移b位，最低位空出的b位补0</li>
+<li>无符号右移：”<code>a&gt;&gt;&gt;b;</code>“  将二进制形式的a逐位右移b位，最低位空出的b位补0</li>
+<li>带符号右移：”<code>a&gt;&gt;b;</code>“  将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位</li>
 </ul>
 <h4 id="2-7-条件运算符"><a href="#2-7-条件运算符" class="headerlink" title="2.7 条件运算符"></a>2.7 条件运算符</h4><p>语法形式：布尔表达式 ？ 表达式1 ：表达式2<br>运算过程：如果布尔表达式的值为true，则返回表达式1的值，否则返回表达式2的值。<br>例如：</p>
-<pre><code>String str = (8&gt;5) ? "8大于5" : "8不大于5" ;
-System.out.println(str);</code></pre><p>因为表达式8&gt;5为true，所以返回“8大于5”</p>
+<pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">8</span><span class="token operator">></span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"8大于5"</span> <span class="token operator">:</span> <span class="token string">"8不大于5"</span> <span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>因为表达式8&gt;5为true，所以返回“8大于5”</p>
 <h4 id="2-8-Java中运算符的优先级（从上到下，由高到低）"><a href="#2-8-Java中运算符的优先级（从上到下，由高到低）" class="headerlink" title="2.8 Java中运算符的优先级（从上到下，由高到低）"></a>2.8 Java中运算符的优先级（从上到下，由高到低）</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228150822.png" alt=""></p>
-<h4 id="2-9-表达式中的类型转换"><a href="#2-9-表达式中的类型转换" class="headerlink" title="2.9 表达式中的类型转换"></a>2.9 表达式中的类型转换</h4><p>int→long→float→double<br>所有的byte、short、char参与算术运算都转为int</p>
+<h4 id="2-9-表达式中的类型转换"><a href="#2-9-表达式中的类型转换" class="headerlink" title="2.9 表达式中的类型转换"></a>2.9 表达式中的类型转换</h4><p><code>int→long→float→double</code><br>所有的byte、short、char参与算术运算都转为int</p>
 <h3 id="3-流程控制语句"><a href="#3-流程控制语句" class="headerlink" title="3. 流程控制语句"></a>3. 流程控制语句</h3><h4 id="3-1-if语句"><a href="#3-1-if语句" class="headerlink" title="3.1 if语句"></a>3.1 if语句</h4><p>语法：</p>
-<pre><code>if(条件){
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token punctuation">)</span><span class="token punctuation">{</span>
     条件成立时执行的代码
-}</code></pre><h4 id="3-2-if…else语句"><a href="#3-2-if…else语句" class="headerlink" title="3.2 if…else语句"></a>3.2 if…else语句</h4><p>语法：</p>
-<pre><code>
-if(条件的布尔表达式){
-    代码块1
-}else{
-    代码块2
-}
-</code></pre><h4 id="3-3-多重if语句"><a href="#3-3-多重if语句" class="headerlink" title="3.3 多重if语句"></a>3.3 多重if语句</h4><p>语法：</p>
-<pre><code>
-if(条件1){
-    代码块1
-}else if(条件2){
-    代码块2
-}else{
-    代码块3
-}
-</code></pre><h4 id="3-4-if嵌套语句"><a href="#3-4-if嵌套语句" class="headerlink" title="3.4 if嵌套语句"></a>3.4 if嵌套语句</h4><p>语法：</p>
-<pre><code>
-if(条件1){
-    if(条件2){
-        代码块1
-    }else{
-        代码块2
-    }
-}else{
-    代码块3
-}
-</code></pre><h4 id="3-5-switch语句"><a href="#3-5-switch语句" class="headerlink" title="3.5 switch语句"></a>3.5 switch语句</h4><p>语法：</p>
-<pre><code>
-switch(表达式){
-    case 值1:
-        执行代码块1  break;
-    case 值2:
-        执行代码块2  break;
-    case 值n:
-        执行代码块n  break;
-    default :
+<span class="token punctuation">}</span></code></pre>
+<h4 id="3-2-if…else语句"><a href="#3-2-if…else语句" class="headerlink" title="3.2 if…else语句"></a>3.2 if…else语句</h4><p>语法：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>条件的布尔表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    代码块<span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    代码块<span class="token number">2</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="3-3-多重if语句"><a href="#3-3-多重if语句" class="headerlink" title="3.3 多重if语句"></a>3.3 多重if语句</h4><p>语法：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    代码块<span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    代码块<span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    代码块<span class="token number">3</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="3-4-if嵌套语句"><a href="#3-4-if嵌套语句" class="headerlink" title="3.4 if嵌套语句"></a>3.4 if嵌套语句</h4><p>语法：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>条件<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        代码块<span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        代码块<span class="token number">2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    代码块<span class="token number">3</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="3-5-switch语句"><a href="#3-5-switch语句" class="headerlink" title="3.5 switch语句"></a>3.5 switch语句</h4><p>语法：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">switch</span><span class="token punctuation">(</span>表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">case</span> 值<span class="token number">1</span><span class="token operator">:</span>
+        执行代码块<span class="token number">1</span>  <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> 值<span class="token number">2</span><span class="token operator">:</span>
+        执行代码块<span class="token number">2</span>  <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> 值n<span class="token operator">:</span>
+        执行代码块n  <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span> <span class="token operator">:</span>
         默认执行的代码
-}
-</code></pre><p><code>注意事项：</code></p>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>注意事项：</code></p>
 <blockquote>
 <ol>
 <li>switch 后面小括号中表达式的值必须是整型或字符型</li>
@@ -684,20 +686,23 @@ switch(表达式){
 </ol>
 </blockquote>
 <h4 id="3-6-循环语句"><a href="#3-6-循环语句" class="headerlink" title="3.6 循环语句"></a>3.6 循环语句</h4><h5 id="3-6-1-循环语句之while"><a href="#3-6-1-循环语句之while" class="headerlink" title="3.6.1 循环语句之while"></a>3.6.1 循环语句之while</h5><p>语法：</p>
-<pre><code>while(判断条件){
+<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>判断条件<span class="token punctuation">)</span><span class="token punctuation">{</span>
     操作代码块
-}</code></pre><p>执行过程：<br>1.判断while后面的条件是否成立<br>2.当条件成立时，执行循环内的操作代码，然后重复执行1和2，直到循环条件不成立为止<br>特点：<code>先判断，后执行</code></p>
+<span class="token punctuation">}</span></code></pre>
+<p>执行过程：<br>1.判断while后面的条件是否成立<br>2.当条件成立时，执行循环内的操作代码，然后重复执行1和2，直到循环条件不成立为止<br>特点：<code>先判断，后执行</code></p>
 <h5 id="3-6-2-循环语句之do…while"><a href="#3-6-2-循环语句之do…while" class="headerlink" title="3.6.2 循环语句之do…while"></a>3.6.2 循环语句之do…while</h5><p>语法：</p>
-<pre><code>do{
+<pre class=" language-java"><code class="language-java"><span class="token keyword">do</span><span class="token punctuation">{</span>
     操作代码块
-}while(判断条件);</code></pre><p>执行过程：<br>1.先执行一遍操作代码，然后帕帕尼段循环条件是否成立<br>2.若条件成立，继续执行1和2，直到条件不成立为止<br>特点：<code>先执行，后判断</code></p>
+<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>判断条件<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>执行过程：<br>1.先执行一遍操作代码，然后帕帕尼段循环条件是否成立<br>2.若条件成立，继续执行1和2，直到条件不成立为止<br>特点：<code>先执行，后判断</code></p>
 <ul>
 <li>do…while语句保证循环至少被执行一次！</li>
 </ul>
 <h5 id="3-6-3-循环语句之for"><a href="#3-6-3-循环语句之for" class="headerlink" title="3.6.3 循环语句之for"></a>3.6.3 循环语句之for</h5><p>语法：</p>
-<pre><code>for (循环变量初始化;循环条件;循环变量变化){
+<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span>循环变量初始化<span class="token punctuation">;</span>循环条件<span class="token punctuation">;</span>循环变量变化<span class="token punctuation">)</span><span class="token punctuation">{</span>
     操作代码块
-}</code></pre><p>执行过程：<br>1.执行循环变量初始化部分，设置循环的初始状态，此<br>部分在整个循环中只执行一次<br>2.进行循环条件的判断，如果条件为 true ，则执行循环<br>体内代码；如果为 false ，则直接退出循环<br>2.执行循环变量变化部分，改变循环变量的值，以便进<br>行下一次条件判断<br>4.依次重新执行2.3.4，直到退出循环<br>特点：<code>相比 while 和 do...while 语句结构更加简洁易读</code></p>
+<span class="token punctuation">}</span></code></pre>
+<p>执行过程：<br>1.执行循环变量初始化部分，设置循环的初始状态，此<br>部分在整个循环中只执行一次<br>2.进行循环条件的判断，如果条件为 true ，则执行循环<br>体内代码；如果为 false ，则直接退出循环<br>2.执行循环变量变化部分，改变循环变量的值，以便进<br>行下一次条件判断<br>4.依次重新执行2.3.4，直到退出循环<br>特点：<code>相比 while 和 do...while 语句结构更加简洁易读</code></p>
 <p>for循环小细节：</p>
 <blockquote>
 <ol>
@@ -707,34 +712,34 @@ switch(表达式){
 </ol>
 </blockquote>
 <h5 id="3-6-4-循环跳转语句之break"><a href="#3-6-4-循环跳转语句之break" class="headerlink" title="3.6.4 循环跳转语句之break"></a>3.6.4 循环跳转语句之break</h5><p>用法示例：</p>
-<pre><code>
-public static void main(String[] args){
-    for(int i=1;i&lt;=10;i++&gt;){
-        if((i&gt;2) &amp;&amp; (i%3==0)){
-            //通过break结束循环，执行循环后的语句
-            break;
-        }
-        System.out.println(i);
-    }
-    System.out.println("结束")
-}
-</code></pre><h5 id="3-6-5-循环跳转语句之continue"><a href="#3-6-5-循环跳转语句之continue" class="headerlink" title="3.6.5 循环跳转语句之continue"></a>3.6.5 循环跳转语句之continue</h5><p>用法示例：</p>
-<pre><code>
-public static void main(String[] args){
-    for(int i=1;i&lt;=10;i++&gt;){
-        if(i % 2 != 0){
-            //通过continue结束本次循环，直接进行下一次循环
-            continue;
-        }
-        System.out.println(i);
-    }
-    System.out.println("结束")
-}
-</code></pre><h3 id="4-数组"><a href="#4-数组" class="headerlink" title="4. 数组"></a>4. 数组</h3><h4 id="4-1-一维数组"><a href="#4-1-一维数组" class="headerlink" title="4.1 一维数组"></a>4.1 一维数组</h4><ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">></span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>i<span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//通过break结束循环，执行循环后的语句</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结束"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 id="3-6-5-循环跳转语句之continue"><a href="#3-6-5-循环跳转语句之continue" class="headerlink" title="3.6.5 循环跳转语句之continue"></a>3.6.5 循环跳转语句之continue</h5><p>用法示例：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//通过continue结束本次循环，直接进行下一次循环</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结束"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="4-数组"><a href="#4-数组" class="headerlink" title="4. 数组"></a>4. 数组</h3><h4 id="4-1-一维数组"><a href="#4-1-一维数组" class="headerlink" title="4.1 一维数组"></a>4.1 一维数组</h4><ul>
 <li>声明方式：<ul>
-<li>int[] a;</li>
-<li>double []b;</li>
-<li>Mydate c[];<br>注：方括号可写到变量名前，也可写到变量名后</li>
+<li><code>int[] a;</code></li>
+<li><code>double []b;</code></li>
+<li><code>Mydate c[];</code><br>注：方括号可写到变量名前，也可写到变量名后</li>
 </ul>
 </li>
 <li>数组初始化：<ul>
@@ -751,14 +756,14 @@ public static void main(String[] args){
 </ul>
 <h4 id="4-2-二维数组"><a href="#4-2-二维数组" class="headerlink" title="4.2 二维数组"></a>4.2 二维数组</h4><p>声明方式：</p>
 
-int [][] t={{1,2},{3,4,5},{6,7,8}};
+`int [][] t={{1,2},{3,4,5},{6,7,8}};`
 
-<p>数组可写为<code>int [][] t=new int [3][];</code><br>不可写为<code>int [][] t=new int [][4];</code></p>
+<p>数组可写为：<code>int [][] t=new int [3][];</code><br>不可写为：<code>int [][] t=new int [][4];</code></p>
 <h4 id="4-3-数组赋值的常用方法"><a href="#4-3-数组赋值的常用方法" class="headerlink" title="4.3 数组赋值的常用方法"></a>4.3 数组赋值的常用方法</h4><ol>
 <li>for循环，效率最低</li>
-<li>System.arraycopy() 效率最高</li>
-<li>Arrays.copyOf() 效率次于第二种方法</li>
-<li>Object.clone() 效率次于第二种和第三种</li>
+<li><code>System.arraycopy()</code> 效率最高</li>
+<li><code>Arrays.copyOf()</code> 效率次于第二种方法</li>
+<li><code>Object.clone()</code> 效率次于第二种和第三种</li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1667,6 +1672,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
 
 </html>
