@@ -522,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    508
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    10 分
                 </div>
                 
 				
@@ -579,20 +579,407 @@
 <li>Object类是所有类的直接或间接父类</li>
 <li>让所有的类有了一致性</li>
 </ul>
-<h5 id="1-4-1-equals"><a href="#1-4-1-equals" class="headerlink" title="1.4.1 equals()"></a>1.4.1 equals()</h5><p>==表示引用是否相当，equals表示内容是否相等，例：</p>
-<pre><code>Integer one = new Integer(1);
-Integer anthoerOne = new Integer(1);
-if(one==anotherOne)     //false
-if(one.equals(anotherOne))      //true</code></pre><p>如果覆盖equals()方法，一般也要覆盖hashCode()方法</p>
-<h5 id="1-4-2-getClass"><a href="#1-4-2-getClass" class="headerlink" title="1.4.2 getClass()"></a>1.4.2 getClass()</h5><p><code>getClass()</code>方法是final方法，不能被重载</p>
-<h5 id="1-4-3-toString"><a href="#1-4-3-toString" class="headerlink" title="1.4.3 toString"></a>1.4.3 toString</h5><ul>
+<h5 id="equals"><a href="#equals" class="headerlink" title="equals()"></a>equals()</h5><p>==表示引用是否相当，equals表示内容是否相等，例：</p>
+<pre class=" language-java"><code class="language-java">Integer one <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Integer anthoerOne <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>one<span class="token operator">==</span>anotherOne<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//false</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>one<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>anotherOne<span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true">//true</span></code></pre>
+<p>如果覆盖equals()方法，一般也要覆盖hashCode()方法</p>
+<h5 id="getClass"><a href="#getClass" class="headerlink" title="getClass()"></a>getClass()</h5><p><code>getClass()</code>方法是final方法，不能被重载</p>
+<h5 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h5><ul>
 <li><code>toString()</code>方法用来返回对象的字符串表示</li>
 <li>常用于显示，例：<code>System.out.prinln(person);</code></li>
 <li>另外，用于字符串的加号，例：”current person is”+person</li>
 <li>通过重载<code>toString()</code>方法，可以适当地显示对象的信息以进行调试</li>
 </ul>
 <h4 id="1-5-基本数据类型的包装类"><a href="#1-5-基本数据类型的包装类" class="headerlink" title="1.5 基本数据类型的包装类"></a>1.5 基本数据类型的包装类</h4><p>与8中基本数据类型相对应，基本数据类型的包装类也有8中，分别是：<br><code>Character,Byte,Short,Integer,Long,Float,Double,Boolean</code><br>注意：首字母要大写</p>
-<h4 id="1-6-包装类的特点"><a href="#1-6-包装类的特点" class="headerlink" title="1.6 包装类的特点"></a>1.6 包装类的特点</h4><h4 id="1-7-Math类"><a href="#1-7-Math类" class="headerlink" title="1.7 Math类"></a>1.7 Math类</h4><h4 id="1-8-System类"><a href="#1-8-System类" class="headerlink" title="1.8 System类"></a>1.8 System类</h4><p>在Java中，系统属性可以通过换几个变量获得<br><code>System.getProperty(String name)</code>方法获得特定的系统属性值<br><code>System.getPropertier()</code>方法获得一个Properties类的对象，其中包含了所有可用的系统属性信息</p>
+<h4 id="1-6-包装类的特点"><a href="#1-6-包装类的特点" class="headerlink" title="1.6 包装类的特点"></a>1.6 包装类的特点</h4><ol>
+<li>这些类都提供了一些常数<ul>
+<li>如<code>Integer.MAX_VALUE</code>(整数最大值),<code>Double.NaN</code>(非数字)等</li>
+</ul>
+</li>
+<li>提供了<code>valueOf(String),toString()</code><ul>
+<li>用于从字符串转换及转换成字符串</li>
+</ul>
+</li>
+<li>通过xxxxValue()方法可以得到所包装的值<ul>
+<li>Integer对象的<code>intValue()</code>方法</li>
+</ul>
+</li>
+<li>对象中所包装的值是不可改变的(immutable)<ul>
+<li>要改变对象中的值只有重新生成新的对象</li>
+</ul>
+</li>
+<li><code>toString(),equals()</code>等方法进行了覆盖</li>
+</ol>
+<h4 id="1-7-Math类"><a href="#1-7-Math类" class="headerlink" title="1.7 Math类"></a>1.7 Math类</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200306191455.png" alt=""></p>
+<h4 id="1-8-System类"><a href="#1-8-System类" class="headerlink" title="1.8 System类"></a>1.8 System类</h4><p>在Java中，系统属性可以通过换几个变量获得<br><code>System.getProperty(String name)</code>方法获得特定的系统属性值<br><code>System.getPropertier()</code>方法获得一个Properties类的对象，其中包含了所有可用的系统属性信息</p>
+<h3 id="2-字符串及日期"><a href="#2-字符串及日期" class="headerlink" title="2. 字符串及日期"></a>2. 字符串及日期</h3><h4 id="2-1-字符串"><a href="#2-1-字符串" class="headerlink" title="2.1 字符串"></a>2.1 字符串</h4><p>String类：创建之后不会再做修改和变动<br>StringBuffer、StringBuilder类：创建之后允许再做更改和变化<br>注意：在循环中使用String的+=运算可能会带来效率问题</p>
+<h4 id="2-2-String类"><a href="#2-2-String类" class="headerlink" title="2.2 String类"></a>2.2 String类</h4><p>String类对象保存不可修改(immutable)的Unicode字符序列<br><code>String类的下述方法能创建并返回一个新的String对象实例</code>：</p>
+<table>
+<thead>
+<tr>
+<th align="right">方法名</th>
+<th align="center">方法的功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">concat</td>
+<td align="center">连接</td>
+</tr>
+<tr>
+<td align="right">replace</td>
+<td align="center">替换</td>
+</tr>
+<tr>
+<td align="right">replaceAll</td>
+<td align="center">替换全部</td>
+</tr>
+<tr>
+<td align="right">substring</td>
+<td align="center">字符串</td>
+</tr>
+<tr>
+<td align="right">toLowerCase</td>
+<td align="center">变成小写</td>
+</tr>
+<tr>
+<td align="right">toUpperCase</td>
+<td align="center">变成大写</td>
+</tr>
+<tr>
+<td align="right">trim</td>
+<td align="center">去掉前后空格</td>
+</tr>
+<tr>
+<td align="right">toString</td>
+<td align="center">变成字符串</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p><code>查找</code>：</p>
+<table>
+<thead>
+<tr>
+<th align="right">方法名</th>
+<th align="center">方法的功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">endsWith</td>
+<td align="center">是不是以什么结尾</td>
+</tr>
+<tr>
+<td align="right">startsWith</td>
+<td align="center">是不是以什么开头</td>
+</tr>
+<tr>
+<td align="right">indexOf</td>
+<td align="center">再找一个字符串在其中的位置</td>
+</tr>
+<tr>
+<td align="right">lastIndexOf</td>
+<td align="center">查找字符串最后一次出现的位置</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><code>比较</code>：</p>
+<table>
+<thead>
+<tr>
+<th align="right">方法名</th>
+<th align="center">方法的功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">equals</td>
+<td align="center">两个字符串进行比较</td>
+</tr>
+<tr>
+<td align="right">equalsIgnoreCase</td>
+<td align="center">忽略大小写来比较</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><code>字符及长度</code>：</p>
+<table>
+<thead>
+<tr>
+<th align="right">方法名</th>
+<th align="center">方法的功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">charAt</td>
+<td align="center">字符在第几个位置</td>
+</tr>
+<tr>
+<td align="right">length</td>
+<td align="center">计算字符串长度</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-3-字符串常量"><a href="#2-3-字符串常量" class="headerlink" title="2.3 字符串常量"></a>2.3 字符串常量</h4><p>除了不可修改(immutable)特点外，还要注意String常量的内部化(interned)问题，即同样的字符串常量是合并的。</p>
+<h4 id="2-4-StringBuffer类"><a href="#2-4-StringBuffer类" class="headerlink" title="2.4 StringBuffer类"></a>2.4 StringBuffer类</h4><p>StringBuffer类对象保存可修改的Unicode字符序列<br>Stringbuilder类似，其效率更高，但不考虑线程安全性<br>构造方法：</p>
+<ul>
+<li><code>StringBuffer()</code></li>
+<li><code>StringBuffer(int capacity)</code></li>
+<li><code>StringBuffer(String initialString)</code><br>实现修改操作的方法：<table>
+<thead>
+<tr>
+<th align="right">方法名</th>
+<th align="center">方法的功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">append</td>
+<td align="center">追加</td>
+</tr>
+<tr>
+<td align="right">insert</td>
+<td align="center">插入</td>
+</tr>
+<tr>
+<td align="right">reverse</td>
+<td align="center">前后反转</td>
+</tr>
+<tr>
+<td align="right">setCharAt</td>
+<td align="center">修改其中一个字符</td>
+</tr>
+<tr>
+<td align="right">setLength</td>
+<td align="center">设定字符串长度</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-5-字符串的分割"><a href="#2-5-字符串的分割" class="headerlink" title="2.5 字符串的分割"></a>2.5 字符串的分割</h4><p>java.util.StringToken类提供了对字符串进行分割的功能<br>构造方法：<br><code>StringTokenizer(String str,String delim);</code><br>该类的重要方法有：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">countTokens</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//分割串的个数</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">hasMoreTokens</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//是否还有分割串</span>
+<span class="token keyword">public</span> String <span class="token function">nextToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//得到下一 分割串</span></code></pre>
+<h4 id="2-6-日期"><a href="#2-6-日期" class="headerlink" title="2.6 日期"></a>2.6 日期</h4><pre class=" language-java"><code class="language-java"><span class="token operator">-</span> Calendar
+    <span class="token operator">-</span> 得到一个实例：Calendar<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//Locale.ZH</span>
+    <span class="token operator">-</span> <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>DAY_OF_MOUTH<span class="token punctuation">)</span>       <span class="token punctuation">.</span><span class="token function">getDisplayName</span><span class="token punctuation">(</span>DAY_OF_WEEK<span class="token punctuation">)</span>
+    <span class="token operator">-</span> <span class="token punctuation">.</span>set       <span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>HOUR<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>      <span class="token punctuation">.</span><span class="token function">roll</span><span class="token punctuation">(</span>MONTH<span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span> <span class="token punctuation">.</span><span class="token function">setTime</span><span class="token punctuation">(</span>Date<span class="token punctuation">)</span>     <span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">-</span> Date
+    <span class="token operator">-</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token keyword">new</span> <span class="token class-name">daate</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span><span class="token function">currenTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token operator">-</span> <span class="token punctuation">.</span><span class="token function">setTime</span><span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span>   <span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">-</span> <span class="token function">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token operator">:</span>yyyy<span class="token operator">-</span>MM<span class="token operator">-</span>dd HH<span class="token operator">:</span>mm<span class="token operator">:</span>ss"<span class="token punctuation">)</span>
+    <span class="token operator">-</span> <span class="token punctuation">.</span>format      
+    <span class="token operator">-</span> <span class="token punctuation">.</span>parse</code></pre>
+<h4 id="2-7-Java8中的Time-API"><a href="#2-7-Java8中的Time-API" class="headerlink" title="2.7 Java8中的Time API"></a>2.7 Java8中的Time API</h4><ul>
+<li><code>java.time.*</code></li>
+<li><code>java.time.format.*</code></li>
+<li>主要的类：<ul>
+<li>Instant  时刻，Clock  时区，Duration   时间段</li>
+<li>常用的类 LocalDateTime，LocalDate，LocalTime</li>
+<li>DateTimeFormatter</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-集合"><a href="#3-集合" class="headerlink" title="3. 集合"></a>3. 集合</h3><h4 id="3-1-Collection-API"><a href="#3-1-Collection-API" class="headerlink" title="3.1 Collection API"></a>3.1 Collection API</h4><ul>
+<li>提供“集合”的功能</li>
+<li>包含一系列的接口和类</li>
+</ul>
+<h4 id="3-2-Collection-API包含的三大类"><a href="#3-2-Collection-API包含的三大类" class="headerlink" title="3.2 Collection API包含的三大类"></a>3.2 Collection API包含的三大类</h4><ul>
+<li>Collection接口：有两个子接口(List表，Set集)<ul>
+<li>List：(Collection的子接口)记录元素的保存顺序，且允许有重复元素</li>
+<li>Set：(Collection的子接口)不记录元素的保存顺序，且不允许有重复元素</li>
+</ul>
+</li>
+<li>Map接口，即映射<ul>
+<li>键-值对(Key-value pair)的集合</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-Collection接口"><a href="#3-3-Collection接口" class="headerlink" title="3.3 Collection接口"></a>3.3 Collection接口</h4><table>
+<thead>
+<tr>
+<th align="right">名称</th>
+<th align="center">类型</th>
+<th align="left">方法的功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">+add(element:Object)</td>
+<td align="center">boolean</td>
+<td align="left">增加</td>
+</tr>
+<tr>
+<td align="right">+remove(element:Object)</td>
+<td align="center">boolean</td>
+<td align="left">减少</td>
+</tr>
+<tr>
+<td align="right">+size()</td>
+<td align="center">int</td>
+<td align="left">个数</td>
+</tr>
+<tr>
+<td align="right">+isEmpty()</td>
+<td align="center">boolean</td>
+<td align="left">判断是否为空</td>
+</tr>
+<tr>
+<td align="right">+contains(element:Object)</td>
+<td align="center">boolean</td>
+<td align="left">判断是否包含某元素</td>
+</tr>
+<tr>
+<td align="right">+iterator</td>
+<td align="center">Iterator</td>
+<td align="left">对接口内元素进行遍历迭代</td>
+</tr>
+</tbody></table>
+<h4 id="3-4-Collection层次结构"><a href="#3-4-Collection层次结构" class="headerlink" title="3.4 Collection层次结构"></a>3.4 Collection层次结构</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200306193027.png" alt=""></p>
+<h4 id="3-5-List"><a href="#3-5-List" class="headerlink" title="3.5 List"></a>3.5 List</h4><p>List接口：线性表(linear list)<br>主要的实现类：ArrayList.LinkedList，及早期的Vector<br>List接口：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">List</span><span class="token operator">&lt;</span>E<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">Collection</span><span class="token operator">&lt;</span>E<span class="token operator">&gt;</span><span class="token punctuation">{</span>
+    E <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    E <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span>E element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">,</span>E element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    E <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token function">indexOf</span><span class="token punctuation">(</span>Object o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="3-6-Iterator"><a href="#3-6-Iterator" class="headerlink" title="3.6 Iterator"></a>3.6 Iterator</h4><p>迭代器Iterator(所有的Collection都能产生)</p>
+<ul>
+<li><code>Iterator iterator = iterable.iterator();</code></li>
+<li><code>while(iterator.hasNext())</code>     <code>doSomething(iterator.next());</code><br>增强的for语句<br>在JDK1.5以后，增强的for语句(enhanced for)或叫for-each,例：<pre class=" language-java"><code class="language-java">格式：<span class="token keyword">for</span><span class="token punctuation">(</span>Element e <span class="token operator">:</span> list<span class="token punctuation">)</span> <span class="token function">doSomething</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+例子：<span class="token keyword">for</span><span class="token punctuation">(</span>Photo photo <span class="token operator">:</span> album<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>photo<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  编译器生成了Iterator的<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></code></pre>
+<h4 id="3-7-Stack栈"><a href="#3-7-Stack栈" class="headerlink" title="3.7 Stack栈"></a>3.7 Stack栈</h4></li>
+<li>遵循<code>”后进先出“(Last in First out，LIFO)</code>原则</li>
+<li>重要线性数据结构</li>
+<li>包含三个方法：<ul>
+<li><code>public Object push(Object item)</code>：将指定对象压入栈中</li>
+<li><code>public Object pop()</code>：将栈最上面的元素从栈中取出，并返回这个对象</li>
+<li><code>public boolean empty()</code>：判断栈中有无对象元素</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-8-Queue队列"><a href="#3-8-Queue队列" class="headerlink" title="3.8 Queue队列"></a>3.8 Queue队列</h4><ul>
+<li>遵循<code>“先进先出”(First in First out，FIFO)</code>原则</li>
+<li>重要线性数据结构</li>
+<li>固定在一端输入数据（称为入队），另一端输出数据（称为出队）</li>
+<li>重要的实现是LinkedList类，类的方法：<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center">可抛出异类的</th>
+<th align="left">返回元素的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">Insert(插入)</td>
+<td align="center">add( e )</td>
+<td align="left">offer( e )</td>
+</tr>
+<tr>
+<td align="right">Remove(移除)</td>
+<td align="center">remove()</td>
+<td align="left">poll()</td>
+</tr>
+<tr>
+<td align="right">Examine(检查)</td>
+<td align="center">element()</td>
+<td align="left">peek()</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="3-9-几个早期的类或接口"><a href="#3-9-几个早期的类或接口" class="headerlink" title="3.9 几个早期的类或接口"></a>3.9 几个早期的类或接口</h4><ul>
+<li>Vector，现多用ArrayList<ul>
+<li>相当于动态数组，elementAt</li>
+</ul>
+</li>
+<li>Stack，现多用LinkedList<ul>
+<li>Stack是Vector的子类，push，pop，peek</li>
+</ul>
+</li>
+<li>Hashtable，现多用HashMap<ul>
+<li>Hashtable实现Map接口，参见Properties类</li>
+</ul>
+</li>
+<li>Enumeration，现多用Iterator<ul>
+<li>Enumeration用另一种方式实现Iterator的功能</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-10-Set集"><a href="#3-10-Set集" class="headerlink" title="3.10 Set集"></a>3.10 Set集</h4><ul>
+<li>两个重要的实现HashSet及TreeSet</li>
+<li>其中TreeSet的底层是用TreeMap来实现的</li>
+<li>Set中的对象不重复，即：hashCode()不等</li>
+</ul>
+<h4 id="3-11-Map"><a href="#3-11-Map" class="headerlink" title="3.11 Map"></a>3.11 Map</h4><ul>
+<li>Map是键-值对的集合<ul>
+<li>其中可以取到entrySet()、keySet()、values()</li>
+<li>Map.entry是一个嵌套接口</li>
+</ul>
+</li>
+<li>Map类的重要实现：<ul>
+<li>HashMap类</li>
+<li>TreeMap类：用红黑树的算法</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-12-Map层次结构"><a href="#3-12-Map层次结构" class="headerlink" title="3.12 Map层次结构"></a>3.12 Map层次结构</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200306193048.png" alt=""></p>
+<h3 id="4-排序与查找"><a href="#4-排序与查找" class="headerlink" title="4. 排序与查找"></a>4. 排序与查找</h3><h4 id="4-1-自编及已有"><a href="#4-1-自编及已有" class="headerlink" title="4.1 自编及已有"></a>4.1 自编及已有</h4><p>自编程序排序与查找：冒泡排序、选择排序、快速排序等<br>系统已有的排序与查找：Arrays类及Collections类</p>
+<h4 id="4-2-Arrays类"><a href="#4-2-Arrays类" class="headerlink" title="4.2 Arrays类"></a>4.2 Arrays类</h4><ul>
+<li>Arrays类是用于对数组进行排序和搜索的类<ul>
+<li><code>Arrays.asList(10,7,6,5,9)</code>方法可以直接得到一个List对象</li>
+</ul>
+</li>
+<li>Arrays类提供了sort()和binarySearch()</li>
+<li>执行binarySearch()前应调用sor()，如：<code>public static void sort(List list);</code></li>
+</ul>
+<h4 id="4-3-比较"><a href="#4-3-比较" class="headerlink" title="4.3 比较"></a>4.3 比较</h4><ul>
+<li>要么对象是java.lang.Comparable<pre class=" language-java"><code class="language-java">  实现方法
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">compareTo</span><span class="token punctuation">(</span>Object obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>price<span class="token operator">-</span><span class="token punctuation">(</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span>price<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+</li>
+<li>要么提供一个java.lang.Comparator<ul>
+<li>实现方法 <code>publicint compare(T o1,T o2)</code></li>
+<li>这些方法的含义要与equals不冲突</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-4-Collections类"><a href="#4-4-Collections类" class="headerlink" title="4.4 Collections类"></a>4.4 Collections类</h4><ul>
+<li>此类完全由在collection上进行操作静态方法组成，如sort、binarySearch及reverse等</li>
+<li>更一般地，使用Lambda表达式(Java8以上)</li>
+</ul>
+<h3 id="5-泛型"><a href="#5-泛型" class="headerlink" title="5. 泛型(*)"></a>5. 泛型(*)</h3><h4 id="5-1-泛型"><a href="#5-1-泛型" class="headerlink" title="5.1 泛型"></a>5.1 泛型</h4><ul>
+<li>泛型(Generic)是JDK1.5增加的最重要的Java语言特性</li>
+<li>使用泛型可以针对不同的类有相同的处理方法</li>
+<li>使用泛型的好处：类型更安全；适用更广泛，针对不同的类有相同的处理办法，但这些类之间不一定有继承关系</li>
+<li>自定义泛型：可自定义泛型类，自定义泛型方法(&lt;&gt;要写到的前面)</li>
+</ul>
+<h4 id="5-2-对泛型的限定"><a href="#5-2-对泛型的限定" class="headerlink" title="5.2 对泛型的限定"></a>5.2 对泛型的限定</h4><ul>
+<li>使用：？<ul>
+<li>如Collections的reverse方法</li>
+<li><code>reverse(List&lt;?&gt; list)</code></li>
+</ul>
+</li>
+<li>使用：extends<ul>
+<li>如Set的addAll方法</li>
+<li><code>addAll(Collection&lt;? extends E&gt;col)</code></li>
+</ul>
+</li>
+<li>使用：super<ul>
+<li>如Collections的fill方法</li>
+<li><code>fill(List&lt;? super T&gt;list,T obj)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="6-常用算法"><a href="#6-常用算法" class="headerlink" title="6. 常用算法"></a>6. 常用算法</h3><h4 id="6-1-遍试-穷举，exhaust-algorithm"><a href="#6-1-遍试-穷举，exhaust-algorithm" class="headerlink" title="6.1 遍试(穷举，exhaust algorithm)"></a>6.1 遍试(穷举，exhaust algorithm)</h4><p>在有限的范围内，可以对所有的值都进行试验和判断，从而找到满足条件的值<br>遍试算法的基本模式：<code>for( ; ; ){ if(); }</code></p>
+<h4 id="6-2-迭代-iterative-algorithm"><a href="#6-2-迭代-iterative-algorithm" class="headerlink" title="6.2 迭代(iterative algorithm)"></a>6.2 迭代(iterative algorithm)</h4><p>多次利用同一公式进行计算，每次将计算结果再带入公式进行计算，从而逐步逼近精确解<br>迭代算法的基本模式：<code>while() { x = f(x); }</code></p>
+<h4 id="6-3-递归-recursive"><a href="#6-3-递归-recursive" class="headerlink" title="6.3 递归(recursive)"></a>6.3 递归(recursive)</h4><p>本质是一个过程调用过程本身，在递归调用中，一个过程执行的某一步要用到它之前几步的结果<br>递归算法的基本模式：<code>f(n){ f(n-1); }</code></p>
+<h4 id="6-4-回溯-试探回溯法，back-track"><a href="#6-4-回溯-试探回溯法，back-track" class="headerlink" title="6.4 回溯(试探回溯法，back-track)"></a>6.4 回溯(试探回溯法，back-track)</h4><p>先选择某一可能的线索进行试探，每一步试探都有多种方式，将每一方式都一一试探，如果不符合条件就返回纠正，反复进行这种试探再返回纠正，直到得出全部符合条件的答案或是问题无解为止<br>回溯算法的基本模式：<code>x++; if(…) x--;</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1360,7 +1747,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">12.3k</span>&nbsp;字
             
             
             
@@ -1487,7 +1874,7 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script>
+
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
         <script>
         $('a').each(function() {
@@ -1506,6 +1893,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
 
 </html>
