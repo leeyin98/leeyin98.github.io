@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>最爱思雨</title>
-      <link href="/posts/7b8b.html"/>
-      <url>/posts/7b8b.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我爱你<br>孔思雨</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>思雨宝贝</title>
       <link href="/posts/ee90.html"/>
       <url>/posts/ee90.html</url>
