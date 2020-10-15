@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础.3 数据运算、流控制和数组, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="keywords" content="Java基础.3 数据运算、流程控制和数组, HTML,Java,JavaScript,Vue.js,CSS">
     <meta name="description" content="数据类型、变量与常量；运算符与表达式；流程控制语句；数组">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java基础.3 数据运算、流控制和数组 | 探赜索隐</title>
+    <title>Java基础.3 数据运算、流程控制和数组 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -362,12 +362,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201613.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础.3 数据运算、流控制和数组</h1>
+                    <h1 class="description center-align post-title">Java基础.3 数据运算、流程控制和数组</h1>
                 </div>
             </div>
         </div>
@@ -522,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    10 分
                 </div>
                 
 				
@@ -558,7 +558,7 @@
 <tr>
 <th>数据类型</th>
 <th align="center">说明</th>
-<th align="center">字节</th>
+<th align="center">位数</th>
 <th align="center">应用</th>
 <th align="center">示例</th>
 </tr>
@@ -566,37 +566,58 @@
 <tbody><tr>
 <td>int</td>
 <td align="center">整型</td>
-<td align="center">4</td>
+<td align="center">32</td>
 <td align="center">用于存储整数，如年龄、个数</td>
 <td align="center">int age=21;</td>
 </tr>
 <tr>
 <td>double</td>
 <td align="center">双精度浮点型</td>
-<td align="center">8</td>
+<td align="center">64</td>
 <td align="center">用于存储小数，如商品价格</td>
 <td align="center">double price=15.5;</td>
 </tr>
 <tr>
 <td>float</td>
 <td align="center">单精度浮点型</td>
-<td align="center">4</td>
+<td align="center">32</td>
 <td align="center">用于存储小数，如身高</td>
 <td align="center">float height=175.2f;</td>
 </tr>
 <tr>
 <td>char</td>
 <td align="center">字符型</td>
-<td align="center">2</td>
+<td align="center">16</td>
 <td align="center">用于存储单个字符，如性格’男’</td>
 <td align="center">char sex=’男’;</td>
 </tr>
 <tr>
 <td>boolean</td>
 <td align="center">布尔型</td>
-<td align="center">1</td>
+<td align="center">8</td>
 <td align="center">表示真或假，取值只能为true或false</td>
 <td align="center">boolean flag=true;</td>
+</tr>
+<tr>
+<td>byte</td>
+<td align="center">字节</td>
+<td align="center">8</td>
+<td align="center">用于处理二进制数据</td>
+<td align="center">byte by = 101;</td>
+</tr>
+<tr>
+<td>short</td>
+<td align="center">短整型</td>
+<td align="center">16</td>
+<td align="center">用于存储整数</td>
+<td align="center">short num = 99;</td>
+</tr>
+<tr>
+<td>long</td>
+<td align="center">长整型</td>
+<td align="center">64</td>
+<td align="center">有时处理日期类型时用到</td>
+<td align="center">long num = 369;</td>
 </tr>
 </tbody></table>
 </li>
@@ -608,25 +629,66 @@
 <li>String是一种常见的引用数据类型，用来表示字符串，赋值时用双引号引起来</li>
 <li>Java中没有“无符号数”</li>
 </ul>
-<h3 id="2-运算符表达式"><a href="#2-运算符表达式" class="headerlink" title="2. 运算符表达式"></a>2. 运算符表达式</h3><h4 id="2-1-算术运算符"><a href="#2-1-算术运算符" class="headerlink" title="2.1 算术运算符"></a>2.1 算术运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145919.png" alt=""></p>
-<h4 id="2-2-赋值运算符"><a href="#2-2-赋值运算符" class="headerlink" title="2.2 赋值运算符"></a>2.2 赋值运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145929.png" alt=""></p>
-<h4 id="2-3-比较运算符"><a href="#2-3-比较运算符" class="headerlink" title="2.3 比较运算符"></a>2.3 比较运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145941.png" alt=""></p>
-<h4 id="2-4-逻辑运算符"><a href="#2-4-逻辑运算符" class="headerlink" title="2.4 逻辑运算符"></a>2.4 逻辑运算符</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145949.png" alt=""></p>
-<h4 id="2-5-位运算符"><a href="#2-5-位运算符" class="headerlink" title="2.5 位运算符"></a>2.5 位运算符</h4><ol>
-<li>~：取反</li>
-<li>&amp;：按位与</li>
-<li>|：按位或</li>
-<li>^：按位异或</li>
-</ol>
-<h4 id="2-6-移位运算符"><a href="#2-6-移位运算符" class="headerlink" title="2.6 移位运算符"></a>2.6 移位运算符</h4><ul>
-<li>左移：”<code>a&lt;&lt;b;</code>“  将二进制形式的a逐位左移b位，最低位空出的b位补0</li>
-<li>无符号右移：”<code>a&gt;&gt;&gt;b;</code>“  将二进制形式的a逐位右移b位，最低位空出的b位补0</li>
-<li>带符号右移：”<code>a&gt;&gt;b;</code>“  将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位</li>
+<h4 id="1-3-类型转换"><a href="#1-3-类型转换" class="headerlink" title="1.3 类型转换"></a>1.3 类型转换</h4><ul>
+<li>自动类型转换：小→大<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">double</span> firstAvg <span class="token operator">=</span> <span class="token number">81.22</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> rise <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> 
+      <span class="token comment" spellcheck="true">//自动类型转换</span>
+      <span class="token keyword">double</span> secondAvg <span class="token operator">=</span> firstAvg<span class="token operator">+</span>rise<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">//任何类型和字符串做连接操作（+）->字符串类型</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+<li>强制类型转换：将一个数据类型大的值放在一个数据类型小的变量中，此时必须通过强制类型转换才可以放的下，但是会损失精度。<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">double</span> firstAvg <span class="token operator">=</span> <span class="token number">81.22</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> rise <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span> 
+      <span class="token comment" spellcheck="true">//强制类型转换</span>
+      <span class="token keyword">int</span> secondAvg <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> firstAvg<span class="token operator">+</span>rise<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">//任何类型和字符串做连接操作（+）->字符串类型</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
 </ul>
-<h4 id="2-7-条件运算符"><a href="#2-7-条件运算符" class="headerlink" title="2.7 条件运算符"></a>2.7 条件运算符</h4><p>语法形式：布尔表达式 ？ 表达式1 ：表达式2<br>运算过程：如果布尔表达式的值为true，则返回表达式1的值，否则返回表达式2的值。<br>例如：</p>
-<pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">8</span><span class="token operator">></span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"8大于5"</span> <span class="token operator">:</span> <span class="token string">"8不大于5"</span> <span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>因为表达式8&gt;5为true，所以返回“8大于5”</p>
+<pre><code>
+### 2. 运算符表达式
+
+#### 2.1 算术运算符
+![](https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145919.png)
+#### 2.2 赋值运算符
+![](https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145929.png)
+
+#### 2.3 比较运算符
+![](https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145941.png)
+
+#### 2.4 逻辑运算符
+![](https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228145949.png)
+注：&amp;&amp;和&amp;，||和|的区别：
+- &amp;&amp;（短路与）：2个表达式同时为true，最终的表达式才为true。
+- &amp;（逻辑与）：它的执行流程同短路与，但是&amp;&amp;操作如果发现第一个表达式为false时，此时不会去执行第二个表达式。
+- ||（短路或）：只要有一个表达式为true，则最终表达式也为true。
+- |（逻辑或）：它的执行流程同短路或，但是||操作如果发现第一个表达式为true是，此时不会执行第二个表达式。
+
+#### 2.5 位运算符
+1. ~：取反
+2. &amp;：按位与
+3. |：按位或
+4. ^：按位异或
+
+#### 2.6 移位运算符
+- 左移："`a&lt;&lt;b;`"  将二进制形式的a逐位左移b位，最低位空出的b位补0
+- 无符号右移："`a&gt;&gt;&gt;b;`"  将二进制形式的a逐位右移b位，最低位空出的b位补0
+- 带符号右移："`a&gt;&gt;b;`"  将二进制形式的a逐位右移b位，最高位空出的b位补原来的符号位
+
+#### 2.7 条件运算符
+语法形式：布尔表达式 ？ 表达式1 ：表达式2
+运算过程：如果布尔表达式的值为true，则返回表达式1的值，否则返回表达式2的值。
+例如：
+```java
+String str = (8&gt;5) ? "8大于5" : "8不大于5" ;
+System.out.println(str);</code></pre><p>因为表达式8&gt;5为true，所以返回“8大于5”</p>
 <h4 id="2-8-Java中运算符的优先级（从上到下，由高到低）"><a href="#2-8-Java中运算符的优先级（从上到下，由高到低）" class="headerlink" title="2.8 Java中运算符的优先级（从上到下，由高到低）"></a>2.8 Java中运算符的优先级（从上到下，由高到低）</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228150822.png" alt=""></p>
 <h4 id="2-9-表达式中的类型转换"><a href="#2-9-表达式中的类型转换" class="headerlink" title="2.9 表达式中的类型转换"></a>2.9 表达式中的类型转换</h4><p><code>int→long→float→double</code><br>所有的byte、short、char参与算术运算都转为int</p>
 <h3 id="3-流程控制语句"><a href="#3-流程控制语句" class="headerlink" title="3. 流程控制语句"></a>3. 流程控制语句</h3><h4 id="3-1-if语句"><a href="#3-1-if语句" class="headerlink" title="3.1 if语句"></a>3.1 if语句</h4><p>语法：</p>
@@ -696,12 +758,13 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <p>执行过程：<br>1.先执行一遍操作代码，然后帕帕尼段循环条件是否成立<br>2.若条件成立，继续执行1和2，直到条件不成立为止<br>特点：<code>先执行，后判断</code></p>
 <ul>
 <li>do…while语句保证循环至少被执行一次！</li>
+<li>安全性不高</li>
 </ul>
 <h5 id="3-6-3-循环语句之for"><a href="#3-6-3-循环语句之for" class="headerlink" title="3.6.3 循环语句之for"></a>3.6.3 循环语句之for</h5><p>语法：</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">for</span> <span class="token punctuation">(</span>循环变量初始化<span class="token punctuation">;</span>循环条件<span class="token punctuation">;</span>循环变量变化<span class="token punctuation">)</span><span class="token punctuation">{</span>
     操作代码块
 <span class="token punctuation">}</span></code></pre>
-<p>执行过程：<br>1.执行循环变量初始化部分，设置循环的初始状态，此<br>部分在整个循环中只执行一次<br>2.进行循环条件的判断，如果条件为 true ，则执行循环<br>体内代码；如果为 false ，则直接退出循环<br>2.执行循环变量变化部分，改变循环变量的值，以便进<br>行下一次条件判断<br>4.依次重新执行2.3.4，直到退出循环<br>特点：<code>相比 while 和 do...while 语句结构更加简洁易读</code></p>
+<p>执行过程：<br>1.执行循环变量初始化部分，设置循环的初始状态，此部分在整个循环中只执行一次<br>2.进行循环条件的判断，如果条件为 true ，则执行循环体内代码；如果为 false ，则直接退出循环<br>2.执行循环变量变化部分，改变循环变量的值，以便进行下一次条件判断<br>4.依次重新执行2.3.4，直到退出循环<br>特点：<code>相比 while 和 do...while 语句结构更加简洁易读</code></p>
 <p>for循环小细节：</p>
 <blockquote>
 <ol>
@@ -710,7 +773,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <li>循环条件部分可以使用逻辑运算符组合的表达式，表示复杂判断条件，但一定注意运算的优先级</li>
 </ol>
 </blockquote>
-<h5 id="3-6-4-循环跳转语句之break"><a href="#3-6-4-循环跳转语句之break" class="headerlink" title="3.6.4 循环跳转语句之break"></a>3.6.4 循环跳转语句之break</h5><p>用法示例：</p>
+<h5 id="3-6-4-循环跳转语句之break"><a href="#3-6-4-循环跳转语句之break" class="headerlink" title="3.6.4 循环跳转语句之break"></a>3.6.4 循环跳转语句之break</h5><p>Break:在switch中表示跳出switch结构。Break也可以在循环中出现，表示跳出整个循环。<br>用法示例：</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">></span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>i<span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -722,7 +785,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结束"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="3-6-5-循环跳转语句之continue"><a href="#3-6-5-循环跳转语句之continue" class="headerlink" title="3.6.5 循环跳转语句之continue"></a>3.6.5 循环跳转语句之continue</h5><p>用法示例：</p>
+<h5 id="3-6-5-循环跳转语句之continue"><a href="#3-6-5-循环跳转语句之continue" class="headerlink" title="3.6.5 循环跳转语句之continue"></a>3.6.5 循环跳转语句之continue</h5><p>Continue:只能在循环结构中出现。表示结束本次循环，执行循环下一次。<br>用法示例：</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token operator">></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -734,8 +797,10 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"结束"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="4-数组"><a href="#4-数组" class="headerlink" title="4. 数组"></a>4. 数组</h3><h4 id="4-1-一维数组"><a href="#4-1-一维数组" class="headerlink" title="4.1 一维数组"></a>4.1 一维数组</h4><ul>
+<h3 id="4-数组"><a href="#4-数组" class="headerlink" title="4. 数组"></a>4. 数组</h3><h4 id="4-1-一维数组"><a href="#4-1-一维数组" class="headerlink" title="4.1 一维数组"></a>4.1 一维数组</h4><p>数组中存储是一连串连续的空间，要求里面的数据类型是一致的。<br>数组的长度一旦确定了，便无法改变，除非手动扩容。<br>数组里面的数据必须顺序存储。</p>
+<ul>
 <li>声明方式：<ul>
+<li>数据类型[] 数组名 = null;</li>
 <li><code>int[] a;</code></li>
 <li><code>double []b;</code></li>
 <li><code>Mydate c[];</code><br>注：方括号可写到变量名前，也可写到变量名后</li>
@@ -752,17 +817,22 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 </ul>
 </li>
 <li>数组元素的引用：<br>每个数组都有个属性length指明其长度<br>例：ages.length指明数组a的长度, <code>for(int i=0;i&lt;ages.length;i++)</code></li>
+<li>内存图<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015110957.png" alt=""></li>
 </ul>
 <h4 id="4-2-二维数组"><a href="#4-2-二维数组" class="headerlink" title="4.2 二维数组"></a>4.2 二维数组</h4><p>声明方式：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> t<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-数组可写为：`<span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> t<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">int</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>`
-不可写为：`<span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> t<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>`</code></pre>
-<h4 id="4-3-数组赋值的常用方法"><a href="#4-3-数组赋值的常用方法" class="headerlink" title="4.3 数组赋值的常用方法"></a>4.3 数组赋值的常用方法</h4><ol>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//静态初始化</span>
+<span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> t<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//声明格式</span>
+数组可写为：<span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> t<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">int</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+不可写为：<span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> t<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<h4 id="4-3-内存图分析"><a href="#4-3-内存图分析" class="headerlink" title="4.3 内存图分析"></a>4.3 内存图分析</h4><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015111140.png" alt=""></p>
+<h4 id="4-4-数组赋值的常用方法"><a href="#4-4-数组赋值的常用方法" class="headerlink" title="4.4 数组赋值的常用方法"></a>4.4 数组赋值的常用方法</h4><ol>
 <li>for循环，效率最低</li>
 <li><code>System.arraycopy()</code> 效率最高</li>
 <li><code>Arrays.copyOf()</code> 效率次于第二种方法</li>
 <li><code>Object.clone()</code> 效率次于第二种和第三种</li>
 </ol>
+<h4 id="4-5-java-util-Arrays类的相关方法介绍"><a href="#4-5-java-util-Arrays类的相关方法介绍" class="headerlink" title="4.5 java.util.Arrays类的相关方法介绍"></a>4.5 java.util.Arrays类的相关方法介绍</h4><p>java.util.Arrays：jdk为我们提供针对数组操作的工具类<br> 常见方法 | 说明<br> —– | :—-:<br> sort   | 为数组排序<br> toString  | 将数组转换成字符串显示<br> fill(数组,value)   | 将数组里面元素使用value填充<br> copyOf(数组,长度) | 拷贝一份新的指定长度的数组<br> binarySearch | 查询元素在数组array中的下标，如果没有返回负数（用此方法前必须先排序）</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1524,7 +1594,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12k</span>&nbsp;字
+                class="white-color">12.9k</span>&nbsp;字
             
             
             
