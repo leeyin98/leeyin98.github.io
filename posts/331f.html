@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java知识笔记10, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="数据类型、变量与常量；运算符与表达式；流程控制语句；数组">
+    <meta name="keywords" content="Java基础4.  类、方法, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="类、字段、方法；类的继承；访问控制修饰符；">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java知识笔记10 | 探赜索隐</title>
+    <title>Java基础4.  类、方法 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -362,12 +362,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201642.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202312.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java知识笔记10</h1>
+                    <h1 class="description center-align post-title">Java基础4.  类、方法</h1>
                 </div>
             </div>
         </div>
@@ -513,7 +513,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-28
+                    2020-03-11
                 </div>
                 
 
@@ -522,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 				
@@ -540,7 +540,289 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="第4讲-类、包和接口"><a href="#第4讲-类、包和接口" class="headerlink" title="第4讲 类、包和接口"></a>第4讲 类、包和接口</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第4讲主要讲述：类、字段、方法；类的继承；访问控制修饰符；</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-类、字段、方法"><a href="#1-类、字段、方法" class="headerlink" title="1. 类、字段、方法"></a>1. 类、字段、方法</h3><h4 id="1-1-类"><a href="#1-1-类" class="headerlink" title="1.1 类"></a>1.1 类</h4><ul>
+<li>组成java程序的基本要素</li>
+<li>字段（field）是类的属性，用变量表示</li>
+<li>方法（method）是类的功能和操作，用函数表示</li>
+<li>封装了一类对象的状态和方法，即它将变量和函数封装到一个类中<br>定义类的语法：<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ClassName</span><span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//属性</span>
+  访问修饰符 DataType   attributeName1<span class="token punctuation">;</span>
+  访问修饰符 DataType   attributeName2<span class="token punctuation">;</span>
+  访问修饰符 DataType   attributeName3<span class="token punctuation">;</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token comment" spellcheck="true">//方法</span>
+  <span class="token function">Method1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">Method1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<pre><code>
+#### 1.2 创建和使用对象
+创建对象：`类名  对象名 = new 类名();`
+访问对象的属性或方法，需要用符号“.”  如：
+```java
+Person p = new Person();
+System.out.println(p.name)；
+p.sayHello()；</code></pre><h4 id="1-3-方法"><a href="#1-3-方法" class="headerlink" title="1.3 方法"></a>1.3 方法</h4><p>方法的基本语法：</p>
+<pre class=" language-java"><code class="language-java">访问修饰符 返回值类型 方法名<span class="token punctuation">(</span>形参列表<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//方法的具体操作。</span>
+      <span class="token punctuation">[</span><span class="token keyword">return</span> value<span class="token punctuation">]</span>
+<span class="token punctuation">}</span></code></pre>
+<p>1、有具体的返回类型时，在方法体中，必须return具体的值，值的类型必须和返回值类型匹配<br>2、return：返回到方法的调用处<br>3、返回值为void时，表示此方法的返回值为空,在具体的方法体中不要返回一个具体的值，但是可以return;(表示返回到方法调用处)<br>方法的调用总结：</p>
+<ul>
+<li>本类中可以直接调用方法</li>
+<li>非本类中必须通过创建对象 ，然后通过对象名.方法名()的形式进行调用</li>
+</ul>
+<p>成员变量：类中定义属性，它的作用域在整个类中<br>局部变量：局部变量的作用范围仅仅在定义它的方法内，或者是在定义它的控制流块中<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015144936.png" alt=""></p>
+<p>方法定义时的参数：形参。<br>方法调用时，传递时的参数称为实参。</p>
+<ul>
+<li>将对象作为方法的参数<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>demo01<span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<p>class Student {<br>    int javaScore;<br>    int htmlScore;<br>    int dbScore;<br>}<br>class ScoreCalc {<br>    public int getSum(Student s){<br>        return s.dbScore+s.htmlScore+s.javaScore;<br>    }<br>    public int getAvg(Student s) {<br>        return getSum(s)/3;<br>    }</p>
+<p>}</p>
+<p>package com.leeyin98.test;<br>public class ScoreCalcTest {<br>    public static void main(String[] args) {<br>        ScoreCalc sc = new ScoreCalc();<br>        //创建学生对象<br>        Student s = new Student();<br>        s.dbScore=90;<br>        s.htmlScore=80;<br>        s.javaScore=60;<br>        System.out.println(“总分为：”+sc.getSum(s));<br>        System.out.println(“平均分为：”+sc.getAvg(s));</p>
+<pre><code>}</code></pre><p>}</p>
+<pre><code>
+- 将对象数组作为方法的参数
+```java
+package com.leeyin98.demo02;
+class Student {
+    int javaScore;
+    int htmlScore;
+    int dbScore;
+    //升高
+    int height;
+}
+class HeightCalc {
+    public int getAvgHeight(Student[] students){
+        int sum = 0 ; 
+        for(int i = 0 ;i&lt;students.length;i++) {
+            sum =sum+students[i].height;
+        }
+        return sum/students.length;
+    }
+}
+public class HeightCalcTest {
+    public static void main(String[] args) {
+        HeightCalc hc = new HeightCalc();
+        Student[] students = new Student[4];
+        students[0]=new Student();
+
+        students[1]=new Student();
+        students[2]=new Student();
+        students[3]=new Student();
+
+        students[0].height=180;
+        students[1].height=190;
+
+        students[2].height=220;
+        students[3].height=165;
+        System.out.println(hc.getAvgHeight(students));
+    }
+}</code></pre><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015145840.png" alt=""></p>
+<h5 id="1-3-1-构造方法"><a href="#1-3-1-构造方法" class="headerlink" title="1.3.1 构造方法"></a>1.3.1 构造方法</h5><p>构造方法和类名同名，且不写返回数据类型</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//变量</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//变量</span>
+    <span class="token keyword">public</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">//方法</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"无参构造方法产生！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="1-3-2-方法重载"><a href="#1-3-2-方法重载" class="headerlink" title="1.3.2 方法重载"></a>1.3.2 方法重载</h5><ul>
+<li>多个方法有相同的名字，编译时也能识别出来</li>
+<li>这些同名方法的返回值类型不同，或参数个数或参数类型不同</li>
+<li>通过方法重载可以实现多态<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+  <span class="token keyword">private</span> String name<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//变量</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//变量</span>
+  <span class="token comment" spellcheck="true">//方法重载</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayHello</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span><span class="token punctuation">{</span>       
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello!My name is"</span><span class="token operator">+</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello!My age is"</span><span class="token operator">+</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<h4 id="1-4-this的使用"><a href="#1-4-this的使用" class="headerlink" title="1.4 this的使用"></a>1.4 this的使用</h4><ul>
+<li>在方法及构造方法中，使用this来访问字段及方法</li>
+<li>解决局部变量与域同名的问题，如：<pre class=" language-java"><code class="language-java">  <span class="token function">Person</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">,</span>String name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//this.age表示域变量，age表示参数变量</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+</li>
+<li>构造方法中，用this调用另一个构造方法，但调用语句必须放第一句</li>
+</ul>
+<h4 id="1-5-再谈引用数据类型"><a href="#1-5-再谈引用数据类型" class="headerlink" title="1.5 再谈引用数据类型"></a>1.5 再谈引用数据类型</h4><p>例子：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>test<span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> age <span class="token punctuation">;</span> 
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span>Person p<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">.</span>age<span class="token operator">=</span><span class="token number">400</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Person  p<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">.</span>age<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a的值为："</span><span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"p的age："</span><span class="token operator">+</span>p<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>内存图：<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015150356.png" alt=""></p>
+<p>修改change方法：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span>Person p<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        p<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        a<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">.</span>age<span class="token operator">=</span><span class="token number">400</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p>内存图：<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015150512.png" alt=""></p>
+<p>总结：</p>
+<ul>
+<li><strong>对于基本类型而言，传递的就是其值</strong></li>
+<li><strong>对于引用数据类型而言，传递的就是地址的值</strong></li>
+<li><strong>一个栈只能指向一个堆。一个堆可以被多个栈所指向</strong></li>
+</ul>
+<h3 id="2-类的继承-初步"><a href="#2-类的继承-初步" class="headerlink" title="2. 类的继承(初步)"></a>2. 类的继承(初步)</h3><h4 id="2-1-继承"><a href="#2-1-继承" class="headerlink" title="2.1 继承"></a>2.1 继承</h4><ul>
+<li>继承是面向对象的程序设计中最为重要的特征之一</li>
+<li>Java中的继承是通过extends关键词来实现的</li>
+<li>字类、父类或超类（父类包括直接或间接被继承的类）</li>
+<li>Java支持单继承：一个类只能有一个直接父类</li>
+<li>子类继承父类的状态和行为(字段和方法，构造方法不可继承）<br>  -可以修改父类的状态或重载父类的行为(字段和方法）<br>  -可以添加新的状态和行为(字段和方法）</li>
+</ul>
+<h4 id="2-2-super的使用"><a href="#2-2-super的使用" class="headerlink" title="2.2 super的使用"></a>2.2 super的使用</h4><ul>
+<li>使用super访问父类的域和方法，this也可以，但用super更加明确</li>
+<li>有时需要使用super以区别同名的域与方法</li>
+<li>构造方法不可继承，但子类在构造方法中可以用super来调用父类的构造方法<ul>
+<li>使用时，super()必须放在第一句</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-3-父类对象与子类对象的转换"><a href="#2-3-父类对象与子类对象的转换" class="headerlink" title="2.3 父类对象与子类对象的转换"></a>2.3 父类对象与子类对象的转换</h4><ul>
+<li>子类对象可以被视为其父类的一个对象</li>
+<li>父类对象不能被当做其子类的一个对象</li>
+<li>若一个方法的形式参数定义的是父类对象，那么调用该方法时，可以使用子类对象作为实际参数</li>
+<li>若父类对象引用指向的实际是一个子类对象，那么这个父类对象的引用可以用强制类型转换成子类对象的引用</li>
+</ul>
+<h4 id="2-4-package包"><a href="#2-4-package包" class="headerlink" title="2.4 package包"></a>2.4 package包</h4><ul>
+<li><code>package pkg1[.pkg2[.pkg3…..]]</code></li>
+<li>包与子包的定义，实际是为了解决名字空间、名字冲突</li>
+<li>与类的继承无关，一个子类与其父类可位于不同的包中</li>
+<li>同一个包中的各个类，默认情况下可互相访问</li>
+<li>使用java中已提供的类，需要用import语句来导入所需要的类。</li>
+<li>语句格式：<code>import package1[.package2…].(classname|*)</code>;如：<ul>
+<li><code>import java.awt.event.*;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-访问控制修饰符"><a href="#3-访问控制修饰符" class="headerlink" title="3. 访问控制修饰符"></a>3. 访问控制修饰符</h3><h4 id="3-1-可见性，即能在哪些地方被使用"><a href="#3-1-可见性，即能在哪些地方被使用" class="headerlink" title="3.1 可见性，即能在哪些地方被使用"></a>3.1 可见性，即能在哪些地方被使用</h4><table>
+<thead>
+<tr>
+<th></th>
+<th align="center">同一个类中</th>
+<th align="center">同一个包中</th>
+<th align="center">不同包中的子类</th>
+<th align="center">不包中的非子类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>默认</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>protected</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>public</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+</tbody></table>
+<h4 id="3-2-private修饰"><a href="#3-2-private修饰" class="headerlink" title="3.2 private修饰"></a>3.2 private修饰</h4><p>将字段用private修饰，用setXXXX与getXXXX方法对类的属性进行存取<br>优点：</p>
+<ul>
+<li>属性用prvate更好地封装和隐藏，外部类不能随意存取和修改</li>
+<li>提供方法来存取对象的属性，在方法中可以对给定的参数的合法性进行校验</li>
+<li>方法可以用来给出计算后的值</li>
+<li>方法可以完成其他必要的工作（如清理资源、设定状态等）</li>
+<li>只提供getXXXX方法，而不提供setXXXX方法，可以保证属性是只读的<br>例：<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Person2</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>age<span class="token operator">></span><span class="token number">0</span> <span class="token operator">&amp;&amp;</span> age<span class="token operator">&lt;</span><span class="token number">200</span><span class="token punctuation">)</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<h4 id="3-3-非访问控制符"><a href="#3-3-非访问控制符" class="headerlink" title="3.3 非访问控制符"></a>3.3 非访问控制符</h4><table>
+<thead>
+<tr>
+<th></th>
+<th align="center">基本含义</th>
+<th align="center">修饰类</th>
+<th align="center">修饰成员</th>
+<th align="center">修饰局部变量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>static</td>
+<td align="center">静态的、非实例的、类的</td>
+<td align="center">可修饰内部类</td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>final</td>
+<td align="center">最终的、不可改变的</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>abstract</td>
+<td align="center">抽象的、不可实例化的</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="3-4-接口-interface"><a href="#3-4-接口-interface" class="headerlink" title="3.4 接口(interface)"></a>3.4 接口(interface)</h4><ul>
+<li>定义接口interface，如<code>interface Collection{....}</code></li>
+<li>实现接口implements，如<code>class FIFOQueue implements Collection{...}</code></li>
+<li>作用：<ul>
+<li>通过接口可以实现不相关类的相同行为，而不需要考虑这些类之间的层次关系，从而在一定意义上实现了多重继承</li>
+<li>通过接口可以指明多个类需要实现的方法</li>
+<li>通过接口可以了解对象的交互界面，而不需要了解对象所对应的类</li>
+</ul>
+</li>
+</ul>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -583,7 +865,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leeyin98.com/posts/19f.html">https://leeyin98.com/posts/19f.html</a>
+                    <a href="https://leeyin98.com/posts/331f.html">https://leeyin98.com/posts/331f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1059,31 +1341,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/c6bf.html">
+                <a href="/posts/efa8.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202232.png" class="responsive-img" alt="Hexo解析出错问题">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201801.png" class="responsive-img" alt="Java基础5. 封装、继承与多态">
                         
-                        <span class="card-title">Hexo解析出错问题</span>
+                        <span class="card-title">Java基础5. 封装、继承与多态</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            报错：[Line 143, Column 15] expected variable end
+                            Java三大特性：封装、继承与多态的使用
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/" class="post-category">
-                                    问题记录及解决
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
                                 </a>
                             
                             
@@ -1093,12 +1375,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
-                        <span class="chip bg-color">问题记录及解决</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
@@ -1112,35 +1394,48 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/1932.html">
+                <a href="/posts/d0a4.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/11.jpg" class="responsive-img" alt="Java知识笔记9">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202008.png" class="responsive-img" alt="Java基础3. 数据运算、流程控制和数组">
                         
-                        <span class="card-title">Java知识笔记9</span>
+                        <span class="card-title">Java基础3. 数据运算、流程控制和数组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            数据类型、变量与常量；运算符与表达式；流程控制语句；数组
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Leeyin98
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1288,7 +1583,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.4k</span>&nbsp;字
+                class="white-color">14.8k</span>&nbsp;字
             
             
             
@@ -1478,6 +1773,6 @@ $(function () {
             }
           }
         });
-        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>
