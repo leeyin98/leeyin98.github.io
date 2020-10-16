@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="阶段性练手项目（一）, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="人机猜拳小项目">
+    <meta name="description" content="人机猜拳小游戏">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -522,7 +522,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    869
+                    820
                 </div>
                 
 
@@ -541,30 +541,11 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="人机猜拳小游戏"><a href="#人机猜拳小游戏" class="headerlink" title="人机猜拳小游戏"></a>人机猜拳小游戏</h1><h2 id="1-需求分析"><a href="#1-需求分析" class="headerlink" title="1.需求分析"></a>1.需求分析</h2><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153204.png" alt=""></p>
-<pre class=" language-java"><code class="language-java">Player类：
-    属性：
-姓名
-分数
-    方法：出拳
-
-Computer类：
-    属性：
-姓名
-分数
-    方法：出拳
-
-Game类：
-    属性：
-        玩家
-        电脑
-    方法：
-        初始化数据<span class="token punctuation">.</span>
-        显示菜单。</code></pre>
-<h2 id="2-功能拆分"><a href="#2-功能拆分" class="headerlink" title="2. 功能拆分"></a>2. 功能拆分</h2><h3 id="2-1-玩家类"><a href="#2-1-玩家类" class="headerlink" title="2.1 玩家类"></a>2.1 玩家类</h3><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153401.png" alt=""></p>
-<h3 id="2-2-电脑类"><a href="#2-2-电脑类" class="headerlink" title="2.2 电脑类"></a>2.2 电脑类</h3><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153542.png" alt=""></p>
+<h2 id="2-功能拆分"><a href="#2-功能拆分" class="headerlink" title="2. 功能拆分"></a>2. 功能拆分</h2><h3 id="2-1-Player类"><a href="#2-1-Player类" class="headerlink" title="2.1 Player类"></a>2.1 Player类</h3><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153401.png" alt=""></p>
+<h3 id="2-2-Computer类"><a href="#2-2-Computer类" class="headerlink" title="2.2 Computer类"></a>2.2 Computer类</h3><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153542.png" alt=""></p>
 <h3 id="2-3-Game类和实现菜单"><a href="#2-3-Game类和实现菜单" class="headerlink" title="2.3 Game类和实现菜单"></a>2.3 Game类和实现菜单</h3><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153620.png" alt=""></p>
 <h3 id="2-4-实现多局对战并统计得分"><a href="#2-4-实现多局对战并统计得分" class="headerlink" title="2.4 实现多局对战并统计得分"></a>2.4 实现多局对战并统计得分</h3><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015153704.png" alt=""></p>
-<h2 id="3-源代码"><a href="#3-源代码" class="headerlink" title="3. 源代码"></a>3. 源代码</h2><h3 id="3-1-玩家类"><a href="#3-1-玩家类" class="headerlink" title="3.1 玩家类"></a>3.1 玩家类</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
+<h2 id="3-源代码"><a href="#3-源代码" class="headerlink" title="3. 源代码"></a>3. 源代码</h2><h3 id="3-1-Player类"><a href="#3-1-Player类" class="headerlink" title="3.1 Player类"></a>3.1 Player类</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Player</span> <span class="token punctuation">{</span>
@@ -587,7 +568,7 @@ Game类：
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="2-2-电脑类-1"><a href="#2-2-电脑类-1" class="headerlink" title="2.2 电脑类"></a>2.2 电脑类</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
+<h3 id="3-2-Computer类"><a href="#3-2-Computer类" class="headerlink" title="3.2 Computer类"></a>3.2 Computer类</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Random<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Computer</span> <span class="token punctuation">{</span>
@@ -609,7 +590,7 @@ Game类：
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="2-3-Game类、实现菜单、多局对战和统计得分"><a href="#2-3-Game类、实现菜单、多局对战和统计得分" class="headerlink" title="2.3 Game类、实现菜单、多局对战和统计得分"></a>2.3 Game类、实现菜单、多局对战和统计得分</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
+<h3 id="3-3-Game类、实现菜单、多局对战和统计得分"><a href="#3-3-Game类、实现菜单、多局对战和统计得分" class="headerlink" title="3.3 Game类、实现菜单、多局对战和统计得分"></a>3.3 Game类、实现菜单、多局对战和统计得分</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Game</span> <span class="token punctuation">{</span>
@@ -738,7 +719,7 @@ Game类：
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="2-4-测试类"><a href="#2-4-测试类" class="headerlink" title="2.4 测试类"></a>2.4 测试类</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
+<h3 id="3-4-测试类"><a href="#3-4-测试类" class="headerlink" title="3.4 测试类"></a>3.4 测试类</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>fingerguess<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FingerGuess</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -746,7 +727,7 @@ Game类：
         game<span class="token punctuation">.</span><span class="token function">initial</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h2 id="3-测试结果"><a href="#3-测试结果" class="headerlink" title="3. 测试结果"></a>3. 测试结果</h2><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015154851.png" alt=""></p>
+<h2 id="4-测试结果"><a href="#4-测试结果" class="headerlink" title="4. 测试结果"></a>4. 测试结果</h2><p><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201015154851.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1508,7 +1489,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.8k</span>&nbsp;字
+                class="white-color">15.9k</span>&nbsp;字
             
             
             
