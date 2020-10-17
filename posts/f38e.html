@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础6. 异常处理与程序调试, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="keywords" content="Java笔记6. 异常处理与程序调试, HTML,Java,JavaScript,Vue.js,CSS">
     <meta name="description" content="异常处理；自定义异常；断言及程序的测试；程序的调试">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java基础6. 异常处理与程序调试 | 探赜索隐</title>
+    <title>Java笔记6. 异常处理与程序调试 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -362,12 +362,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228203812.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201613.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础6. 异常处理与程序调试</h1>
+                    <h1 class="description center-align post-title">Java笔记6. 异常处理与程序调试</h1>
                 </div>
             </div>
         </div>
@@ -513,7 +513,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-28
+                    2020-03-29
                 </div>
                 
 
@@ -522,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    975
+                    611
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 				
@@ -540,7 +540,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第5讲-异常处理与程序调试"><a href="#第5讲-异常处理与程序调试" class="headerlink" title="第5讲 异常处理与程序调试"></a>第5讲 异常处理与程序调试</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第6讲主要讲述：异常处理；自定义异常；断言及程序的测试；程序的调试</p>
+                <h1 id="第6讲-异常处理与程序调试"><a href="#第6讲-异常处理与程序调试" class="headerlink" title="第6讲 异常处理与程序调试"></a>第6讲 异常处理与程序调试</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第6讲主要讲述：异常处理；自定义异常；断言及程序的测试；程序的调试</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-异常处理"><a href="#1-异常处理" class="headerlink" title="1. 异常处理"></a>1. 异常处理</h3><h4 id="1-1-异常定义"><a href="#1-1-异常定义" class="headerlink" title="1.1 异常定义"></a>1.1 异常定义</h4><p>异常，对应着Java运行错误的处理机制</p>
 <h5 id="基本写法"><a href="#基本写法" class="headerlink" title="基本写法"></a>基本写法</h5><pre class=" language-java"><code class="language-java"><span class="token keyword">try</span><span class="token punctuation">{</span>
     语句组<span class="token punctuation">;</span>
@@ -590,67 +590,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="3-断言及程序的测试"><a href="#3-断言及程序的测试" class="headerlink" title="3. 断言及程序的测试"></a>3. 断言及程序的测试</h3><h4 id="3-1-断言-assertion"><a href="#3-1-断言-assertion" class="headerlink" title="3.1 断言(assertion)"></a>3.1 断言(assertion)</h4><p>assert的写法：</p>
-<ul>
-<li><code>assert 表达式;</code></li>
-<li><code>assert 表达式：信息;</code><br>例：<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Assertion</span><span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">assert</span> <span class="token function">hypotenuse</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">5</span> <span class="token operator">:</span> <span class="token string">"算法不正确"</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//assert写法</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">static</span> <span class="token keyword">double</span> <span class="token function">hypotenuse</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">,</span><span class="token keyword">double</span> y<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>x<span class="token operator">*</span>x<span class="token operator">+</span>y<span class="token operator">*</span>y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<code>调试程序时，若表达式部位true，则程序会产生异常并输出相关的错误信息</code></li>
-</ul>
-<h4 id="3-2-程序的测试及Junit"><a href="#3-2-程序的测试及Junit" class="headerlink" title="3.2 程序的测试及Junit"></a>3.2 程序的测试及Junit</h4><p>Eclipse中</p>
-<ul>
-<li>项目上右键-New-Junit Test Case</li>
-<li>项目上右键-Run as-Junit Test</li>
-</ul>
-<h4 id="3-3-测试函数"><a href="#3-3-测试函数" class="headerlink" title="3.3 测试函数"></a>3.3 测试函数</h4><p><code>@Test</code>用来标注测试函数<br>测试中常用的语句：</p>
-<ul>
-<li><code>fail(信息);</code>             //表示程序出错</li>
-<li><code>assertEquals(参数1,参数2);</code>      //表示程序要保证两个参数相等</li>
-<li><code>assertNull(参数);</code>     //表示参数要为null</li>
-</ul>
-<h3 id="4-程序的调试"><a href="#4-程序的调试" class="headerlink" title="4. 程序的调试"></a>4. 程序的调试</h3><h4 id="4-1-程序中的错误"><a href="#4-1-程序中的错误" class="headerlink" title="4.1 程序中的错误"></a>4.1 程序中的错误</h4><p>程序中的错误，通常分为三大类：</p>
-<ul>
-<li>语法错误(Syntax error)<ul>
-<li>编辑、编译器发现</li>
-</ul>
-</li>
-<li>运行错误(Runtime error)<ul>
-<li>异常处理机制</li>
-</ul>
-</li>
-<li>逻辑错误(Logic error)<ul>
-<li>调试(debug)、单元测试(unit test)</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-2-程序的调试-debug"><a href="#4-2-程序的调试-debug" class="headerlink" title="4.2 程序的调试(debug)"></a>4.2 程序的调试(debug)</h4><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><p>1.在IDE中，项目上右键，debug as…<br>2.进入到调试试图(debug perspective)</p>
-<h5 id="调试的手段"><a href="#调试的手段" class="headerlink" title="调试的手段"></a>调试的手段</h5><ul>
-<li>断点(breakpoint)：<ul>
-<li>切换断点：鼠标右击编译器左边条；Eclipse快捷键：Ctrl+Shift+B</li>
-</ul>
-</li>
-<li>跟踪(trace)：<ul>
-<li>Eclipse快捷键</li>
-<li>逐语句执行：F5</li>
-<li>逐过程执行：F6</li>
-<li>跳出函数：F7</li>
-<li>运行到光标处：Ctrl+R</li>
-</ul>
-</li>
-<li>监视(watch)<ul>
-<li>即时监视：鼠标指向变量</li>
-<li>快速监视：点右键，Inspector</li>
-<li>添加监视：点右键，Watch</li>
-</ul>
-</li>
-</ul>
-<script>
+<h3 id="3-断言及程序的测试"><a href="#3-断言及程序的测试" class="headerlink" title="3. 断言及程序的测试"></a>3. 断言及程序的测试</h3><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -693,7 +633,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leeyin98.com/posts/1d72.html">https://leeyin98.com/posts/1d72.html</a>
+                    <a href="https://leeyin98.com/posts/f38e.html">https://leeyin98.com/posts/f38e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1169,31 +1109,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/c6bf.html">
+                <a href="/posts/e773.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200229155446.png" class="responsive-img" alt="【混剪练习.00】怎样的战斗在等待着我">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202232.png" class="responsive-img" alt="Hexo解析出错问题">
-                        
-                        <span class="card-title">Hexo解析出错问题</span>
+                        <span class="card-title">【混剪练习.00】怎样的战斗在等待着我</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            报错：[Line 143, Column 15] expected variable end
+                            “艾欧尼亚，昂扬不灭！”
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/" class="post-category">
-                                    问题记录及解决
+                            <a href="/categories/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/" class="post-category">
+                                    视频剪辑
                                 </a>
                             
                             
@@ -1203,12 +1142,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95%E5%8F%8A%E8%A7%A3%E5%86%B3/">
-                        <span class="chip bg-color">问题记录及解决</span>
-                    </a>
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/">
+                        <span class="chip bg-color">视频剪辑</span>
                     </a>
                     
                 </div>
@@ -1222,24 +1157,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/7a13.html">
+                <a href="/posts/b5d8.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202748.png" class="responsive-img" alt="Java基础1. Java语言与面向对象的程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228200526.png" class="responsive-img" alt="Java笔记5. 接口">
                         
-                        <span class="card-title">Java基础1. Java语言与面向对象的程序设计</span>
+                        <span class="card-title">Java笔记5. 接口</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语言的历史和发展；Java程序的编译及运行
+                            接口概述；接口实现；理解接口；相关接口介绍；适配器介绍；接口总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
                             </span>
                         <span class="publish-author">
                             
@@ -1411,7 +1346,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.9k</span>&nbsp;字
+                class="white-color">15.4k</span>&nbsp;字
             
             
             
@@ -1601,6 +1536,6 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
 
 </html>
