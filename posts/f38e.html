@@ -522,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    15 分
                 </div>
                 
 				
@@ -766,9 +766,7 @@
             System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <h5 id="重抛异常及异常链接"><a href="#重抛异常及异常链接" class="headerlink" title="重抛异常及异常链接"></a>重抛异常及异常链接</h5><p>对于异常，不仅要进行捕获处理，有时也要将此异常进一步传递给调用者，以便让调用者也能感受到这种异常，这时可以在catch语句块或finally语句块中采取以下三种方式：</p>
 <ul>
 <li>将当前捕获的异常再次抛出<ul>
@@ -792,6 +790,84 @@
 <li>不要在循环结构包裹try…catch块</li>
 </ol>
 </blockquote>
+<h4 id="1-6-Log4j日志框架"><a href="#1-6-Log4j日志框架" class="headerlink" title="1.6 Log4j日志框架"></a>1.6 Log4j日志框架</h4><h5 id="Log4j概述"><a href="#Log4j概述" class="headerlink" title="Log4j概述"></a>Log4j概述</h5><p>log4j是一个非常优秀的开源日志记录工具</p>
+<ul>
+<li>控制日志的输出级别</li>
+<li>控制日志信息输送的目的地是控制台、文件等</li>
+<li>控制每一条日志的输出格式</li>
+</ul>
+<h5 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h5><ol>
+<li>添加jar包到工程<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201018155913.png" alt=""></li>
+<li>add buildPath<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201018155950.png" alt=""></li>
+<li>从emaple文件中拷贝一个*.properties文件到src目录<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201018160008.png" alt=""></li>
+<li>将<em>.properties文件改名为*</em>log4j.properties**</li>
+<li>使用Logger输出日志信息<br>栗子：<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+ <span class="token comment" spellcheck="true">//定义一个日志输出器</span>
+ <span class="token keyword">static</span> Logger logger <span class="token operator">=</span> Logger<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">"com.leeyin98.test.Test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+     Student s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">try</span><span class="token punctuation">{</span>
+         s<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>Age Exception e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">//System.out.println(e.getMessage());</span>
+         <span class="token comment" spellcheck="true">//e.printStackTrace();</span>
+         logger<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         logger<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         logger<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         logger<span class="token punctuation">.</span><span class="token function">fatal</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ol>
+<h5 id="关于log4j的详细说明"><a href="#关于log4j的详细说明" class="headerlink" title="关于log4j的详细说明"></a>关于log4j的详细说明</h5><p>参数说明:</p>
+<ol>
+<li>debug，指的是日志记录器的(Logger)的输出级别,主要级别</li>
+</ol>
+<ul>
+<li>fatal:指出每个严重的错误事件将会导致应用程序的退出</li>
+<li>error:虽然发生错误事件,但任然不影响系统的运行</li>
+<li>warn:表明会出现潜在的错误的情形</li>
+<li>info:在粗粒度级别上指明消息,强调应用程序的运行过程</li>
+<li>debug:指出细粒度信息事件,对应用调试非常有帮助<br>各个级别的优先级为：<strong>fatal&gt;error&gt;warn&gt;info&gt;debug</strong></li>
+</ul>
+<ol start="2">
+<li>stout、lofile<br>日志输出目的地Appender，log4j允许记录日志到多个输出目的地,一个输出目的地被称为一个Appender,lo4j中常用的Appender有以下几种：</li>
+</ol>
+<ul>
+<li>ConsoleAppender:输出日志到控制台,通过Target属性配置输出到System.out或者System.err,默认为System.out</li>
+<li>FileAppender:输出日志到一个文件,通过File属性配置文件的路径及名称</li>
+</ul>
+<ol start="3">
+<li>日志布局类型Layout<br>Appender必须使用一个与之相关联的布局类型Layout,用来指定输出的样式,log4j中最常用的Layout有3种：</li>
+</ol>
+<ul>
+<li>HTMLLayout:格式化日志输出为HTML</li>
+<li>SimpleLayout:以一种非常简单的方式格式化输出,它打印级别Level,然后跟着一个破折号”-“最后是日志消息</li>
+<li>PatterLayout:根据制定的转换模式格式化日志输出,从而支持丰富多样的输出格式,需要配置layout.ConversionPattern属性,如果没有配置该属性,则使用默认的转化模式</li>
+</ul>
+<ol start="4">
+<li>转换模式ConversionPattern<br>对于PatterLayout,需要配置layout.ConversionPattern属性,常用的配置参数及含义如下</li>
+</ol>
+<ul>
+<li>%d:用来输出日志的日期和时间，%d{yyyy-MM-dd HH:mm:ss}</li>
+<li>%m:输出代码中制定的信息</li>
+<li>%n:输出换行</li>
+<li>%l:用来输出日志事件的发生位置,包括类名、发生的线程、以及代码中的行数</li>
+<li>%p:用来输出优先级</li>
+<li>%F:输出文件名</li>
+<li>%M:用来输出方法名<br>栗子：<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>course<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>InputMismatchException<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ul>
+<p>public class Couse {<br>    public static void choiceCourse() throws NoException{<br>        System.out.println(“请输入课程编号（1-3之间任意数）”);<br>        Scanner input = new Scanner(System.in);<br>        int num = input.nextInt();<br>        switch(num) {<br>            case 1:<br>                System.out.println(“c++”);<br>                break;<br>            case 2:<br>                System.out.println(“c语言”);<br>                break;<br>            case 3:<br>                System.out.println(“scala”);<br>                break;<br>            default :<br>                throw new NoException();<br>        }<br>    }<br>    Logger logger = Logger.getLogger(“com.leeyin98.course.Couse”);<br>    public static void main(String[] args) {<br>        try {<br>            choiceCourse();<br>        } catch(InputMismatchException e) {<br>            System.out.println(“输入的必须是数字”);<br>            e.printStackTrace();<br>        }catch (NoException e) {<br>            e.printStackTrace();<br>        }finally{<br>            System.out.println(“欢迎提出建议”);<br>        }<br>        System.out.println(“程序执行结束”);<br>    }<br>}</p>
+<p>```</p>
 <h3 id="2-类与对象的声明周期"><a href="#2-类与对象的声明周期" class="headerlink" title="2. 类与对象的声明周期"></a>2. 类与对象的声明周期</h3><h4 id="2-1-Java中的内存"><a href="#2-1-Java中的内存" class="headerlink" title="2.1 Java中的内存"></a>2.1 Java中的内存</h4><p><strong>方法区</strong>：Java的虚拟机中有一块专门用来存放已经加载的类的信息、常量、静态变量以及方法代码的内存区域，称为方法区<br><strong>常量池</strong>：常量池是方法区的一部分，主要用来存放常量和类中的符号引用等信息<br><strong>堆区</strong>：用于存放类的对象实例(new 出来的都在堆区)<br><strong>栈区</strong>：又叫Java虚拟机栈，是由一个个的栈帧组成的后进先出的栈式结构，栈帧中存放方法运行时产生的局部变量、方法出口等信息。当调用一个方法时，虚拟机栈中就会创建一个栈帧存放这些数据，<strong>当方法调用完成时，栈帧消失</strong>，如果方法中调用了其他方法，则继续在栈顶创建新的栈帧</p>
 <h4 id="2-2-类的声明周期"><a href="#2-2-类的声明周期" class="headerlink" title="2.2 类的声明周期"></a>2.2 类的声明周期</h4><h5 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h5><p>在加载阶段，Java虚拟机会做什么工作呢？其实很简单，就是找到需要加载的类并把类的信息加载到JVM的方法区中，然后在堆区中实例化一个java.lang.Class对象，作为方法区中这个类的信息的入口。<br>类的加载方式比较灵活，我们最常用的加载方式有两种，<strong>一种是根据类的全路径名找到相应的class文件，然后从class文件中读取文件内容；</strong>另一种是从jar文件中读取。<br>加载阶段是类的生命周期中的第一个阶段，加载阶段之后，是连接阶段。有一点需要注意，就是有时连接阶段并不会等加载阶段完全完成之后才开始，而是交叉进行，可能一个类只加载了一部分之后，连接阶段就已经开始了。但是这两个阶段总的开始时间和完成时间总是固定的：加载阶段总是在连接阶段之前开始，连接阶段总是在加载阶段完成之后完成。</p>
 <h5 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h5><p>连接阶段比较复杂，一般会跟加载阶段和初始化阶段交叉进行，这个阶段的主要任务就是做一些加载后的验证工作以及一些初始化前的准备工作，可以细分为三个步骤：验证、准备和解析。<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201018140903.png" alt=""><br><strong>验证</strong>：当一个类被加载之后，必须要验证一下这个类是否合法，比如这个类是不是符合字节码的格式、变量与方法是不是有重复、数据类型是不是有效、继承与实现是否合乎标准等等。总之，这个阶段的目的就是保证加载的类是能够被JVM所运行。<br><strong>准备</strong>：准备阶段的工作就是为类的静态变量分配内存并设为JVM默认的初值，对于非静态的变量，则不会为它们分配内存。有一点需要注意，这时候，静态变量的初值为JVM默认的初值，而不是我们在程序中设定的初值。<br>JVM默认的初值是这样的：</p>
@@ -1576,7 +1652,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18k</span>&nbsp;字
+                class="white-color">20.7k</span>&nbsp;字
             
             
             
