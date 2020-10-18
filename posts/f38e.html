@@ -853,21 +853,60 @@
 <li>转换模式ConversionPattern<br>对于PatterLayout,需要配置layout.ConversionPattern属性,常用的配置参数及含义如下</li>
 </ol>
 <ul>
-<li>%d:用来输出日志的日期和时间，%d{yyyy-MM-dd HH:mm:ss}</li>
-<li>%m:输出代码中制定的信息</li>
-<li>%n:输出换行</li>
-<li>%l:用来输出日志事件的发生位置,包括类名、发生的线程、以及代码中的行数</li>
-<li>%p:用来输出优先级</li>
-<li>%F:输出文件名</li>
-<li>%M:用来输出方法名<br>栗子：<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>course<span class="token punctuation">;</span>
+<li><p>%d:用来输出日志的日期和时间，%d{yyyy-MM-dd HH:mm:ss}</p>
+</li>
+<li><p>%m:输出代码中制定的信息</p>
+</li>
+<li><p>%n:输出换行</p>
+</li>
+<li><p>%l:用来输出日志事件的发生位置,包括类名、发生的线程、以及代码中的行数</p>
+</li>
+<li><p>%p:用来输出优先级</p>
+</li>
+<li><p>%F:输出文件名</p>
+</li>
+<li><p>%M:用来输出方法名<br>栗子：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>leeyin98<span class="token punctuation">.</span>course<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>InputMismatchException<span class="token punctuation">;</span>
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Scanner<span class="token punctuation">;</span>
 <span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>
-</code></pre>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Couse</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">choiceCourse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> NoException<span class="token punctuation">{</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"请输入课程编号（1-3之间任意数）"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Scanner input <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> num <span class="token operator">=</span> input<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">switch</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"c++"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"c语言"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"scala"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">default</span> <span class="token operator">:</span>
+              <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NoException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  Logger logger <span class="token operator">=</span> Logger<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">"com.leeyin98.course.Couse"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+          <span class="token function">choiceCourse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>InputMismatchException e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"输入的必须是数字"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NoException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"欢迎提出建议"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"程序执行结束"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 </li>
 </ul>
-<p>public class Couse {<br>    public static void choiceCourse() throws NoException{<br>        System.out.println(“请输入课程编号（1-3之间任意数）”);<br>        Scanner input = new Scanner(System.in);<br>        int num = input.nextInt();<br>        switch(num) {<br>            case 1:<br>                System.out.println(“c++”);<br>                break;<br>            case 2:<br>                System.out.println(“c语言”);<br>                break;<br>            case 3:<br>                System.out.println(“scala”);<br>                break;<br>            default :<br>                throw new NoException();<br>        }<br>    }<br>    Logger logger = Logger.getLogger(“com.leeyin98.course.Couse”);<br>    public static void main(String[] args) {<br>        try {<br>            choiceCourse();<br>        } catch(InputMismatchException e) {<br>            System.out.println(“输入的必须是数字”);<br>            e.printStackTrace();<br>        }catch (NoException e) {<br>            e.printStackTrace();<br>        }finally{<br>            System.out.println(“欢迎提出建议”);<br>        }<br>        System.out.println(“程序执行结束”);<br>    }<br>}</p>
-<p>```</p>
 <h3 id="2-类与对象的声明周期"><a href="#2-类与对象的声明周期" class="headerlink" title="2. 类与对象的声明周期"></a>2. 类与对象的声明周期</h3><h4 id="2-1-Java中的内存"><a href="#2-1-Java中的内存" class="headerlink" title="2.1 Java中的内存"></a>2.1 Java中的内存</h4><p><strong>方法区</strong>：Java的虚拟机中有一块专门用来存放已经加载的类的信息、常量、静态变量以及方法代码的内存区域，称为方法区<br><strong>常量池</strong>：常量池是方法区的一部分，主要用来存放常量和类中的符号引用等信息<br><strong>堆区</strong>：用于存放类的对象实例(new 出来的都在堆区)<br><strong>栈区</strong>：又叫Java虚拟机栈，是由一个个的栈帧组成的后进先出的栈式结构，栈帧中存放方法运行时产生的局部变量、方法出口等信息。当调用一个方法时，虚拟机栈中就会创建一个栈帧存放这些数据，<strong>当方法调用完成时，栈帧消失</strong>，如果方法中调用了其他方法，则继续在栈顶创建新的栈帧</p>
 <h4 id="2-2-类的声明周期"><a href="#2-2-类的声明周期" class="headerlink" title="2.2 类的声明周期"></a>2.2 类的声明周期</h4><h5 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h5><p>在加载阶段，Java虚拟机会做什么工作呢？其实很简单，就是找到需要加载的类并把类的信息加载到JVM的方法区中，然后在堆区中实例化一个java.lang.Class对象，作为方法区中这个类的信息的入口。<br>类的加载方式比较灵活，我们最常用的加载方式有两种，<strong>一种是根据类的全路径名找到相应的class文件，然后从class文件中读取文件内容；</strong>另一种是从jar文件中读取。<br>加载阶段是类的生命周期中的第一个阶段，加载阶段之后，是连接阶段。有一点需要注意，就是有时连接阶段并不会等加载阶段完全完成之后才开始，而是交叉进行，可能一个类只加载了一部分之后，连接阶段就已经开始了。但是这两个阶段总的开始时间和完成时间总是固定的：加载阶段总是在连接阶段之前开始，连接阶段总是在加载阶段完成之后完成。</p>
 <h5 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h5><p>连接阶段比较复杂，一般会跟加载阶段和初始化阶段交叉进行，这个阶段的主要任务就是做一些加载后的验证工作以及一些初始化前的准备工作，可以细分为三个步骤：验证、准备和解析。<br><img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20201018140903.png" alt=""><br><strong>验证</strong>：当一个类被加载之后，必须要验证一下这个类是否合法，比如这个类是不是符合字节码的格式、变量与方法是不是有重复、数据类型是不是有效、继承与实现是否合乎标准等等。总之，这个阶段的目的就是保证加载的类是能够被JVM所运行。<br><strong>准备</strong>：准备阶段的工作就是为类的静态变量分配内存并设为JVM默认的初值，对于非静态的变量，则不会为它们分配内存。有一点需要注意，这时候，静态变量的初值为JVM默认的初值，而不是我们在程序中设定的初值。<br>JVM默认的初值是这样的：</p>
@@ -1652,7 +1691,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.7k</span>&nbsp;字
+                class="white-color">25.5k</span>&nbsp;字
             
             
             
@@ -1842,6 +1881,6 @@ $(function () {
             }
           }
         });
-        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hibiki.model.json"},"display":{"position":"left","width":150,"height":310},"mobile":{"show":false},"react":{"opacity":0.8},"log":false});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>
