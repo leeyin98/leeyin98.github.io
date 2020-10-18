@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Markdown常用格式, HTML,Java,JavaScript,Vue.js,CSS">
-    <meta name="description" content="轻量级标记语言Markdown使用指南">
+    <meta name="keywords" content="Java笔记8. 内部类, HTML,Java,JavaScript,Vue.js,CSS">
+    <meta name="description" content="内部类的好处；内部类的分类；普通内部类；静态内部类；私有内部类；方法内部类；匿名内部类">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Markdown常用格式 | 探赜索隐</title>
+    <title>Java笔记8. 内部类 | 探赜索隐</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png">
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -362,12 +362,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201642.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201801.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Markdown常用格式</h1>
+                    <h1 class="description center-align post-title">Java笔记8. 内部类</h1>
                 </div>
             </div>
         </div>
@@ -484,12 +484,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                <span class="chip bg-color">教程</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -500,8 +500,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -513,7 +513,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-26
+                    2020-04-08
                 </div>
                 
 
@@ -522,14 +522,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    655
+                    109
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -540,99 +540,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第一次是使用阿里云轻量服务器+WordPress搭建的第一个博客，但感觉自由度和可玩性不够高，于是转战GitHub pages+Hexo。由于其支持十分轻量方便的Markdown编辑器语言，而本人又是第一次接触该语言，于是搜集了并记录了些Markdown的常用写法，故在此留档。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>以下为Markdown常用写法</p>
-<h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
-<li>使用符号：#<blockquote>
-<p>#一级标题<br>##二级标题<br>###三级标题<br>####四级标题<br>#####五级标题<br>######六级标题<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：我楼下的列表俩字就是栗子</li>
-</ul>
-<h3 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h3><ul>
-<li>使用符号：-<blockquote>
-<p>-文本1<br>-文本2<br>-文本3<br>有序列表可用1.,2.,3.等代替符号-来表示(???为什么我下面用了没实现)<br>注：符号#和文本之间要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<ol>
-<li>我现在就是</li>
-<li>是个栗</li>
-<li>子</li>
-</ol>
-</li>
-</ul>
-<h3 id="3-链接和图片"><a href="#3-链接和图片" class="headerlink" title="3.链接和图片"></a>3.链接和图片</h3><ul>
-<li>使用符号：!,[]和() <blockquote>
-<p>插入链接格式：[] (),[]内填写文本信息，()内填写链接地址<br>插入图片格式：! [] ()，[]内留空，()内填写图片地址<br>注：各个符号间不留空</p>
-</blockquote>
-</li>
-<li>例：<br>链接：<a href="https://leeyin98.com/posts/3eeb.html">原地TP</a><br>图片：<img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/loading.gif" data-original="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/logo.png" alt=""></li>
-</ul>
-<h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h3><ul>
-<li>使用符号：&gt;<blockquote>
-<p>模板：&gt; 文本信息，&gt;&gt; 文本信息<br>需要引用时，文字前添加符号&gt;即可，&gt;&gt;表示引用内再次引用<br>注：符号&gt;和文本要保留一个字符的空格</p>
-</blockquote>
-</li>
-<li>例：<blockquote>
-<p>我是一<br>个栗<br>子</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="5-字体"><a href="#5-字体" class="headerlink" title="5.字体"></a>5.字体</h3><ul>
-<li>使用符号： *<blockquote>
-<p>粗体：用两个符号<em>包含一段文字<br>斜体：用一个符号</em>包含一段文字</p>
-</blockquote>
-</li>
-<li>例：举个栗子，<em>我是斜体</em>，<strong>我是粗体</strong>。</li>
-</ul>
-<h3 id="6-代码块"><a href="#6-代码块" class="headerlink" title="6.代码块"></a>6.代码块</h3><ul>
-<li>使用符号：`<blockquote>
-<p>引用一行：用符号`包含语句<br>引用多行：将符号```置于代码的首行与末行,并在首行符号后指明所用的编程语言</p>
-</blockquote>
-</li>
-<li>例：<br>  单行：<code>This is a chestnut</code><br>  多行：<pre class=" language-java"><code class="language-java">  This
-     is
-       a
-        chestnut</code></pre>
-</li>
-</ul>
-<h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7.表格"></a>7.表格</h3><ul>
-<li>使用符号：|，-和:<blockquote>
-<ul>
-<li>第二行分割表头和内容。<br>有一个-就行，为了对齐，多加了几个</li>
-<li>文字默认居左<br>两边加 ：表示文字居中<br>右边加 ：表示文字居右</li>
-<li>文字和符号前要留个字符的空格</li>
-</ul>
-</blockquote>
-</li>
-<li>例：<table>
-<thead>
-<tr>
-<th>栗子No.x</th>
-<th align="center">优点</th>
-<th align="right">价格</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>栗子No.0</td>
-<td align="center">又长又宽</td>
-<td align="right">$1024</td>
-</tr>
-<tr>
-<td>栗子No.1</td>
-<td align="center">又大又圆</td>
-<td align="right">$512</td>
-</tr>
-<tr>
-<td>栗子No.2</td>
-<td align="center">好吃</td>
-<td align="right">$256</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h3 id="附：参考来源"><a href="#附：参考来源" class="headerlink" title="附：参考来源"></a>附：参考来源</h3><p><a href="https://segmentfault.com/markdown" target="_blank" rel="noopener">Markdown编辑器语法指南</a></p>
-<script>
+                <h1 id="第8讲-内部类"><a href="#第8讲-内部类" class="headerlink" title="第8讲 内部类"></a>第8讲 内部类</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第8讲主要讲述：内部类的好处；内部类的分类；普通内部类；静态内部类；私有内部类；方法内部类；匿名内部类</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h4><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -675,7 +584,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://leeyin98.com/posts/3eeb.html">https://leeyin98.com/posts/3eeb.html</a>
+                    <a href="https://leeyin98.com/posts/11b9.html">https://leeyin98.com/posts/11b9.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,12 +622,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">教程</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
                         </div>
@@ -1151,24 +1060,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/7a13.html">
+                <a href="/posts/7cf.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228200640.png" class="responsive-img" alt="Java笔记1. Java语言与面向对象的程序设计">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228201801.png" class="responsive-img" alt="Java笔记9. 面向对象的设计原则">
                         
-                        <span class="card-title">Java笔记1. Java语言与面向对象的程序设计</span>
+                        <span class="card-title">Java笔记9. 面向对象的设计原则</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语言的历史和发展；Java程序的编译及运行；Java程序的类型与基本构成；开发Java程序的基本步骤；程序中进行输入输出；小知识
+                            类与类之间的关系；开闭原则；单一职责；里式替换原则；依赖倒转原则；接口隔离原则等
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
                         </span>
                         <span class="publish-author">
                             
@@ -1204,32 +1113,48 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/cf60.html">
+                <a href="/posts/dd6e.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/4.jpg" class="responsive-img" alt="个人简历">
+                        <img src="https://cdn.jsdelivr.net/gh/leeyin98/figurebed/imgs/20200228202249.png" class="responsive-img" alt="Java笔记7. 常用类">
                         
-                        <span class="card-title">个人简历</span>
+                        <span class="card-title">Java笔记7. 常用类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            个人简历
+                            包装类；Math；Random；String；StringBuffer；Object；日期操作；System
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Leeyin98
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
                 </div>
                 
             </div>
