@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>Java笔记12. 文件与IO</title>
+      <link href="/posts/dc89.html"/>
+      <url>/posts/dc89.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="第12讲-集合框架"><a href="#第12讲-集合框架" class="headerlink" title="第12讲 集合框架"></a>第12讲 集合框架</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第12讲主要讲述：File概述；IO流概述及其使用</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java笔记11. 泛型与枚举</title>
+      <link href="/posts/43be.html"/>
+      <url>/posts/43be.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="第11讲-集合框架"><a href="#第11讲-集合框架" class="headerlink" title="第11讲 集合框架"></a>第11讲 集合框架</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第11讲主要讲述：泛型概述；自定义泛型；泛型方法；通配符及泛型上下限；枚举概述；单例模式与多例</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java笔记10. 集合框架</title>
+      <link href="/posts/a583.html"/>
+      <url>/posts/a583.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="第10讲-集合框架"><a href="#第10讲-集合框架" class="headerlink" title="第10讲 集合框架"></a>第10讲 集合框架</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>第10讲主要讲述：Collection接口；迭代器Iterator；List集合；Set集合；Map接口；泛型集合</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h4 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h4><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java笔记9. 面向对象的设计原则</title>
       <link href="/posts/7cf.html"/>
       <url>/posts/7cf.html</url>
